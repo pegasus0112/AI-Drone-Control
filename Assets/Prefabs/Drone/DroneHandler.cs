@@ -46,12 +46,35 @@ public class DroneHandler : MonoBehaviour
             | droneControl.motorRB.isGrounded;
     }
 
-    private void CheckRotorGotDestroyed()
+    public bool CheckRotorGotDestroyed()
     {
-        rotorStateLF = droneControl.motorLF.rotor.IsDestroyed();
-        rotorStateRF = droneControl.motorRF.rotor.IsDestroyed();
-        rotorStateLB = droneControl.motorLB.rotor.IsDestroyed();
-        rotorStateRB = droneControl.motorRB.rotor.IsDestroyed();
+        return rotorStateLF && rotorStateRF && rotorStateLB && rotorStateRB;
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        GameObject hittedObject = collision.GetContact(0).thisCollider.gameObject;
+        if (hittedObject.tag == "Rotor")
+        {
+            ROTOR hittedMotor = hittedObject.transform.parent.parent.GetComponent<Motor>().motorPosition;
+
+            switch(hittedMotor)
+            {
+                case ROTOR.LF:
+                    rotorStateLF = false;
+                    break;
+                case ROTOR.RF:
+                    rotorStateRF = false;
+                    break;
+                case ROTOR.LB:
+                    rotorStateLB = false;
+                    break;
+                case ROTOR.RB:
+                    rotorStateRB = false;
+                    break;
+            }
+        }
+
+        //Debug.Log(collision.GetContact(0).thisCollider.gameObject.tag + " - " + collision.GetContact(0).otherCollider.gameObject.tag);
+    }
 }

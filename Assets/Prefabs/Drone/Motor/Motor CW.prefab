@@ -50,10 +50,12 @@ MonoBehaviour:
   spinDirection: 1
   maxRPM: 3500
   rotor: {fileID: 1795680318813437787}
-  forceMultiplier: 20
+  forceMultiplier: 10
   isGrounded: 1
+  toCheckGroundDistance: 0.02
   groundCheckPoint: {fileID: 4082194626980765848}
   forcePoint: {fileID: 7469878713502132623}
+  rotorIsOkay: 1
   droneRig: {fileID: 0}
 --- !u!1001 &2415666254313530218
 PrefabInstance:
@@ -132,6 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cffb57c7941e29b47b1f66cf46cd1c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotorIsOkay: 1
 --- !u!4 &6612755277809695947 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8809905411280740257, guid: ee6112bc2da9b7a4d8dbac4c67b8e37f, type: 3}

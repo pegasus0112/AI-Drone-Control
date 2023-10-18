@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.MLAgents;
@@ -43,7 +44,22 @@ public class DroneAI : Agent
     // Update is called once per frame
     void FixedUpdate()
     {
-        RequestDecision();
+        if(droneHandler.CheckRotorGotDestroyed())
+        {
+            RequestDecision();
+        } else
+        {
+            ResettingControls();
+            //GAME OVER
+        }
+    }
+
+    private void ResettingControls()
+    {
+        droneControl.throttle = 0;
+        droneControl.yaw = 0;
+        droneControl.pitch = 0;
+        droneControl.roll = 0;
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)

@@ -609,6 +609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Motor CCW (LB)
       objectReference: {fileID: 0}
+    - target: {fileID: 5931080440594310372, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8251422751558014544, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -654,6 +658,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7963775248013033728}
     - target: {fileID: 8982913601769202708, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: motorPosition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982913601769202708, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
       propertyPath: forceMultiplier
       value: 3.5
       objectReference: {fileID: 0}
@@ -661,7 +669,8 @@ PrefabInstance:
       propertyPath: toCheckGroundDistance
       value: 0.02
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5715964214339261190, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -694,6 +703,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Motor CCW (RF)
       objectReference: {fileID: 0}
+    - target: {fileID: 5931080440594310372, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8251422751558014544, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -739,6 +752,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7963775248013033728}
     - target: {fileID: 8982913601769202708, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: motorPosition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982913601769202708, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
       propertyPath: forceMultiplier
       value: 3.5
       objectReference: {fileID: 0}
@@ -746,7 +763,8 @@ PrefabInstance:
       propertyPath: toCheckGroundDistance
       value: 0.02
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5715964214339261190, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -831,7 +849,8 @@ PrefabInstance:
       propertyPath: toCheckGroundDistance
       value: 0.02
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3934545454200276363, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -909,6 +928,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7963775248013033728}
     - target: {fileID: 8982913601769202708, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+      propertyPath: motorPosition
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982913601769202708, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
       propertyPath: forceMultiplier
       value: 3.5
       objectReference: {fileID: 0}
@@ -916,7 +939,8 @@ PrefabInstance:
       propertyPath: toCheckGroundDistance
       value: 0.02
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3934545454200276363, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

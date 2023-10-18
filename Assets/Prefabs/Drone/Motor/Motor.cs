@@ -2,15 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static DroneHandler;
 
 public class Motor : MonoBehaviour
 {
     [Header("Settings")]
     [Range(0, 1)] public float motorSpeed = 0;
+    public ROTOR motorPosition;
 
     //1 == cw
     //-1 == ccw
-    [Range(-1,1)] public float spinDirection = 1;
+    private float spinDirection = 1;
+
     public float maxRPM = 3500;
     public GameObject rotor;
 
@@ -27,13 +30,20 @@ public class Motor : MonoBehaviour
     [Header("Physics")]
     public Transform forcePoint;
 
+    [Space(10)]
+    [Header("State")]
+    public bool rotorIsOkay = true;
+
     //drone rigidbody shared by all motors
     public Rigidbody droneRig;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        if(motorPosition == ROTOR.RF || motorPosition == ROTOR.LB)
+        {
+            spinDirection = -1;
+        }
     }
 
     // Update is called once per frame
