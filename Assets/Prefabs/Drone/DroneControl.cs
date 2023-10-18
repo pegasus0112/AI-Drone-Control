@@ -90,10 +90,10 @@ public class DroneControl : MonoBehaviour
 
     private void ClampMotorPower()
     {
-        newMotorPowerLF = Math.Clamp(newMotorPowerLF, 0.01f, 1);
-        newMotorPowerRB = Math.Clamp(newMotorPowerRB, 0.01f, 1);
-        newMotorPowerLB = Math.Clamp(newMotorPowerLB, 0.01f, 1);
-        newMotorPowerRF = Math.Clamp(newMotorPowerRF, 0.01f, 1);
+        newMotorPowerLF = Math.Clamp(newMotorPowerLF, 0, 1);
+        newMotorPowerRB = Math.Clamp(newMotorPowerRB, 0, 1);
+        newMotorPowerLB = Math.Clamp(newMotorPowerLB, 0, 1);
+        newMotorPowerRF = Math.Clamp(newMotorPowerRF, 0, 1);
     }
 
     //only use for ROLL, YAW, PITCH

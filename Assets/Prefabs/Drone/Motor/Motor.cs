@@ -40,7 +40,7 @@ public class Motor : MonoBehaviour
     void FixedUpdate()
     {
         droneRig.AddForceAtPosition(transform.up * motorSpeed * forceMultiplier, forcePoint.position);
-        rotor.transform.Rotate(Vector3.up, spinDirection * Remap(motorSpeed, 0, 1, 0, maxRPM) * Time.deltaTime);
+        rotor.transform.Rotate(Vector3.up, spinDirection * Remap(motorSpeed, 0, 1, 360, maxRPM) * Time.deltaTime);
 
         //TODO: GroundCheck
         isGrounded = CheckGrounded();
