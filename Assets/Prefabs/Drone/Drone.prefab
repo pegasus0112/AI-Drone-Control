@@ -403,8 +403,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8046368367370664421}
   serializedVersion: 4
-  m_Mass: 0.25
-  m_Drag: 0.5
+  m_Mass: 0.28
+  m_Drag: 1
   m_AngularDrag: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -456,10 +456,11 @@ MonoBehaviour:
   yaw: 0
   pitch: 0
   roll: 0
-  motorLF: {fileID: 0}
-  motorRF: {fileID: 0}
-  motorLB: {fileID: 0}
-  motorRB: {fileID: 0}
+  motorLF: {fileID: 2146823048081812129}
+  motorRF: {fileID: 8231752623396780594}
+  motorLB: {fileID: 8472049469541116328}
+  motorRB: {fileID: 1287192767931090913}
+  yawMultiplier: 12
 --- !u!114 &2949905505468083478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,10 +478,10 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
   droneHandler: {fileID: 5043874156345446804}
-  droneControl: {fileID: 0}
+  droneControl: {fileID: 1326000320420491401}
   droneRig: {fileID: 7963775248013033728}
   selfPlay: 1
-  manualControl: {fileID: 0}
+  manualControl: {fileID: 3104508842387288139}
 --- !u!114 &3104508842387288139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,7 +501,15 @@ MonoBehaviour:
     m_Id: 2ec7a7d2-38b6-4a8e-aeed-b15403e5a5e6
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: a15f65c7-c9da-4e5e-a6cd-36b24c304b62
+      m_Path: <HID::OpenTX FrSky Taranis Joystick>/z
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Throttle Axis
+      m_Flags: 0
     m_Flags: 0
   yawAxis:
     m_Name: Yaw Axis
@@ -509,7 +518,15 @@ MonoBehaviour:
     m_Id: 12bd193f-e4e7-4b87-b713-ba17d7f10d5d
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: e6159b1d-3f57-482b-950b-1a406d7daf18
+      m_Path: <HID::OpenTX FrSky Taranis Joystick>/rx
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Yaw Axis
+      m_Flags: 0
     m_Flags: 0
   pitchAxis:
     m_Name: Pitch Axis
@@ -518,7 +535,15 @@ MonoBehaviour:
     m_Id: 5d33e157-8d74-4c46-9fc9-646cb867d013
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 6ecb834c-c452-46d4-a945-7f9dea50a959
+      m_Path: <Joystick>/stick/y
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Pitch Axis
+      m_Flags: 0
     m_Flags: 0
   rollAxis:
     m_Name: Roll Axis
@@ -527,7 +552,15 @@ MonoBehaviour:
     m_Id: d5450e66-22d1-469f-b759-6fbdc1518ff7
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 7739020c-4db4-4f70-adbe-93384c16562c
+      m_Path: <Joystick>/stick/x
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Roll Axis
+      m_Flags: 0
     m_Flags: 0
   throttle: 0
   yaw: 0
@@ -546,7 +579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 1
+    VectorObservationSize: 11
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 4
@@ -621,6 +654,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7963775248013033728}
     - target: {fileID: 8982913601769202708, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: forceMultiplier
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982913601769202708, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
       propertyPath: toCheckGroundDistance
       value: 0.02
       objectReference: {fileID: 0}
@@ -629,6 +666,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+--- !u!114 &8472049469541116328 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8982913601769202708, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+  m_PrefabInstance: {fileID: 665262021984554428}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f73167fc661aa40a9da644edd32180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8915312030920186860 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8251422751558014544, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
@@ -691,6 +739,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7963775248013033728}
     - target: {fileID: 8982913601769202708, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: forceMultiplier
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982913601769202708, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
       propertyPath: toCheckGroundDistance
       value: 0.02
       objectReference: {fileID: 0}
@@ -699,6 +751,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+--- !u!114 &8231752623396780594 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8982913601769202708, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+  m_PrefabInstance: {fileID: 1050666057738362406}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f73167fc661aa40a9da644edd32180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8941411557900748918 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8251422751558014544, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
@@ -761,6 +824,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7963775248013033728}
     - target: {fileID: 8982913601769202708, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+      propertyPath: forceMultiplier
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982913601769202708, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
       propertyPath: toCheckGroundDistance
       value: 0.02
       objectReference: {fileID: 0}
@@ -774,6 +841,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8251422751558014544, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
   m_PrefabInstance: {fileID: 7017369510213832373}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2146823048081812129 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8982913601769202708, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+  m_PrefabInstance: {fileID: 7017369510213832373}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f73167fc661aa40a9da644edd32180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7887139212255192053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -831,6 +909,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7963775248013033728}
     - target: {fileID: 8982913601769202708, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+      propertyPath: forceMultiplier
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982913601769202708, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
       propertyPath: toCheckGroundDistance
       value: 0.02
       objectReference: {fileID: 0}
@@ -839,6 +921,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+--- !u!114 &1287192767931090913 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8982913601769202708, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+  m_PrefabInstance: {fileID: 7887139212255192053}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f73167fc661aa40a9da644edd32180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2303114112331642277 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8251422751558014544, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}

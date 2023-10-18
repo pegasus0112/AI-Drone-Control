@@ -36,20 +36,17 @@ public class ManualControl : MonoBehaviour
     public void ReadUserInputJoysticks()
     {
         throttle = throttleAxis.ReadValue<float>();
-        throttle = Remap(throttle, 0, 0.63f, 0, 1);
-        Debug.Log("throttle " + throttle);
+        throttle = Remap(throttle, -1, 1, 0, 1);
+        //Debug.Log("throttle " + throttle);
 
-        pitch = pitchAxis.ReadValue<float>();
-        pitch = Remap(pitch, 0, 1, -1, 1);
-        Debug.Log("pitch " + pitch);
+        pitch = -pitchAxis.ReadValue<float>();
+        //Debug.Log("pitch " + pitch);
 
         roll = rollAxis.ReadValue<float>();
-        roll = Remap(roll, -1, 0, 1, -1);
-        Debug.Log("roll " + roll);
-
+        //Debug.Log("roll " + roll);
+        
         yaw = yawAxis.ReadValue<float>();
-        yaw = Remap(yaw, 0, -1, -1, 1);
-        Debug.Log("yaw " + yaw);
+        //Debug.Log("yaw " + yaw);
     }
 
     private float Remap(float value, float from1, float to1, float from2, float to2)

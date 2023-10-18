@@ -14,7 +14,7 @@ public class Motor : MonoBehaviour
     public float maxRPM = 3500;
     public GameObject rotor;
 
-    public float forceMultiplier = 20f;
+    [Range(1, 10)] public float forceMultiplier = 1;
 
     [Space(10)]
     [Header("GroundCheck")]
@@ -39,8 +39,8 @@ public class Motor : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        droneRig.AddForceAtPosition(Vector3.up * motorSpeed,forcePoint.position);
-        rotor.transform.Rotate(Vector3.up, spinDirection * Remap(motorSpeed, 0, 1, 0, maxRPM) * forceMultiplier * Time.deltaTime);
+        droneRig.AddForceAtPosition(transform.up * motorSpeed * forceMultiplier, forcePoint.position);
+        rotor.transform.Rotate(Vector3.up, spinDirection * Remap(motorSpeed, 0, 1, 0, maxRPM) * Time.deltaTime);
 
         //TODO: GroundCheck
         isGrounded = CheckGrounded();

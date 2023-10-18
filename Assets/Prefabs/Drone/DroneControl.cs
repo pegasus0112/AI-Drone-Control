@@ -12,11 +12,18 @@ public class DroneControl : MonoBehaviour
     [Range(-1, 1)] public float pitch = 0;
     [Range(-1, 1)] public float roll = 0;
 
+    [Space(10)]
     [Header("Motors")]
     public Motor motorLF;
     public Motor motorRF;
     public Motor motorLB;
     public Motor motorRB;
+
+    [Space(10)]
+    [Header("Settings")]
+    [Range(5, 20)] public float yawMultiplier;
+
+
 
     private float newMotorPowerLF = 0;
     private float newMotorPowerLB = 0;
@@ -51,37 +58,34 @@ public class DroneControl : MonoBehaviour
         newMotorPowerLB = throttle;
         newMotorPowerRB = throttle;
 
-        /*
         //yaw
-        
+        float calculatedYaw = CalculateRatesValue(yaw);
         newMotorPowerLF -= calculatedYaw;
         newMotorPowerRF += calculatedYaw;
         newMotorPowerLB += calculatedYaw;
         newMotorPowerRB -= calculatedYaw;
+
         //pitch
-        
+        float calculatedPitch = CalculateRatesValue(pitch);
         newMotorPowerLF -= calculatedPitch;
         newMotorPowerRF -= calculatedPitch;
         newMotorPowerLB += calculatedPitch;
         newMotorPowerRB += calculatedPitch;
+
         //roll
-        
+        float calculatedRoll = CalculateRatesValue(roll);
         newMotorPowerLF += calculatedRoll;
         newMotorPowerRF -= calculatedRoll;
         newMotorPowerLB += calculatedRoll;
         newMotorPowerRB -= calculatedRoll;
 
         ClampMotorPower();
-                */
-        float calculatedYaw = calculateRatesValue(yaw);
-        float calculatedPitch = calculateRatesValue(pitch);
-        float calculatedRoll = calculateRatesValue(roll);
         AddTorqueRotation(calculatedYaw);
     }
 
     private void AddTorqueRotation(float calculatedYaw)
     {
-        gameObject.transform.Rotate(new Vector3(0, calculatedYaw * 4, 0));
+        gameObject.transform.Rotate(new Vector3(0, calculatedYaw * yawMultiplier, 0));
     }
 
     private void ClampMotorPower()
@@ -93,7 +97,7 @@ public class DroneControl : MonoBehaviour
     }
 
     //only use for ROLL, YAW, PITCH
-    private float calculateRatesValue(float unmappedValue)
+    private float CalculateRatesValue(float unmappedValue)
     {
         return 0.9f * Mathf.Pow(unmappedValue, 3) + 0.1f * unmappedValue;
     }
