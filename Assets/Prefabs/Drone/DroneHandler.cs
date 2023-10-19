@@ -62,26 +62,34 @@ public class DroneHandler : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        GameObject hittedObject = collision.GetContact(0).thisCollider.gameObject;
-        if (hittedObject.tag == "Rotor")
+        GameObject ownHittedObject = collision.GetContact(0).thisCollider.gameObject;
+        GameObject hittedObject = collision.GetContact(0).otherCollider.gameObject;
+        if (ownHittedObject.tag == "Rotor")
         {
-            ROTOR hittedMotor = hittedObject.transform.parent.parent.GetComponent<Motor>().motorPosition;
-
-            switch(hittedMotor)
+            if (hittedObject.tag == "HittableBlock")
             {
-                case ROTOR.LF:
-                    rotorStateLF = false;
-                    break;
-                case ROTOR.RF:
-                    rotorStateRF = false;
-                    break;
-                case ROTOR.LB:
-                    rotorStateLB = false;
-                    break;
-                case ROTOR.RB:
-                    rotorStateRB = false;
-                    break;
+                Debug.Log("OK");
+            } else
+            {
+                ROTOR hittedMotor = ownHittedObject.transform.parent.parent.GetComponent<Motor>().motorPosition;
+
+                switch (hittedMotor)
+                {
+                    case ROTOR.LF:
+                        rotorStateLF = false;
+                        break;
+                    case ROTOR.RF:
+                        rotorStateRF = false;
+                        break;
+                    case ROTOR.LB:
+                        rotorStateLB = false;
+                        break;
+                    case ROTOR.RB:
+                        rotorStateRB = false;
+                        break;
+                }
             }
+
         }
 
         //Debug.Log(collision.GetContact(0).thisCollider.gameObject.tag + " - " + collision.GetContact(0).otherCollider.gameObject.tag);
