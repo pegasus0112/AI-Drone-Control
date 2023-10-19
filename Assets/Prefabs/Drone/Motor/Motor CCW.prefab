@@ -30,8 +30,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5183471297447296055}
   - {fileID: 1252526689486071668}
+  - {fileID: 5183471297447296055}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8982913601769202708
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   motorSpeed: 0
-  spinDirection: -1
+  motorPosition: 0
   maxRPM: 3500
   rotor: {fileID: 5931080440594310372}
   forceMultiplier: 10
@@ -184,10 +184,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4138141842447883313, guid: 8914d4d8602399e4da3368510c6835fa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5715964214339261190}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8914d4d8602399e4da3368510c6835fa, type: 3}
 --- !u!4 &1252526689486071668 stripped
 Transform:
@@ -199,16 +196,3 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4138141842447883313, guid: 8914d4d8602399e4da3368510c6835fa, type: 3}
   m_PrefabInstance: {fileID: 7719957184488765653}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5715964214339261190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5931080440594310372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cffb57c7941e29b47b1f66cf46cd1c66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotorIsOkay: 1

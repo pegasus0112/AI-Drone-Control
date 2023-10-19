@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Rotor
+  - Wall
+  - HittableBlock
+  - Gate
   layers:
   - Default
   - TransparentFX

@@ -9,14 +9,17 @@ using UnityEngine;
 
 public class DroneAI : Agent
 {
+    [Header("Status")]
+    public bool selfPlay = true;
+    
+
+    [Space(10)]
     [Header("Setup")]
     public DroneHandler droneHandler;
     public DroneControl droneControl;
     public Rigidbody droneRig;
 
-    [Space(10)]
-    [Header("Status")]
-    public bool selfPlay = true;
+    public EnvironmentManager environmentManager;
 
     [Space(10)]
     [Header("Manual Control Setup")]
@@ -50,6 +53,7 @@ public class DroneAI : Agent
         } else
         {
             ResettingControls();
+            environmentManager.EndTraining();
             //GAME OVER
         }
     }

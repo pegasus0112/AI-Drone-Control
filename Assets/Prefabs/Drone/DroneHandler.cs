@@ -25,6 +25,15 @@ public class DroneHandler : MonoBehaviour
     [Header("Status")]
     public bool isGrounded;
 
+    //important for resetting state after restarting training
+    private void OnEnable()
+    {
+        rotorStateLF = true;
+        rotorStateRF = true;
+        rotorStateLB = true;
+        rotorStateRB = true;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
