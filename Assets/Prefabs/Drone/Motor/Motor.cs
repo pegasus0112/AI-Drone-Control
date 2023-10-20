@@ -46,7 +46,7 @@ public class Motor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(motorPosition == ROTOR.RF || motorPosition == ROTOR.LB)
+        if (motorPosition == ROTOR.RF || motorPosition == ROTOR.LB)
         {
             spinDirection = -1;
         }

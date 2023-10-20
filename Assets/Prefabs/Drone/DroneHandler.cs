@@ -15,6 +15,7 @@ public class DroneHandler : MonoBehaviour
     }
 
     public DroneControl droneControl;
+    public DroneAI droneAI;
 
     //are rotors ok?
     public bool rotorStateLF = true;
@@ -37,7 +38,7 @@ public class DroneHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -49,10 +50,10 @@ public class DroneHandler : MonoBehaviour
 
     private void CheckAnyMotorGrounded()
     {
-       isGrounded = droneControl.motorLF.isGrounded 
-            | droneControl.motorRF.isGrounded 
-            | droneControl.motorLB.isGrounded 
-            | droneControl.motorRB.isGrounded;
+        isGrounded = droneControl.motorLF.isGrounded
+             | droneControl.motorRF.isGrounded
+             | droneControl.motorLB.isGrounded
+             | droneControl.motorRB.isGrounded;
     }
 
     public bool CheckRotorGotDestroyed()
@@ -60,38 +61,56 @@ public class DroneHandler : MonoBehaviour
         return rotorStateLF && rotorStateRF && rotorStateLB && rotorStateRB;
     }
 
+    //Walls & Ground
     private void OnCollisionEnter(Collision collision)
     {
         GameObject ownHittedObject = collision.GetContact(0).thisCollider.gameObject;
-        GameObject hittedObject = collision.GetContact(0).otherCollider.gameObject;
         if (ownHittedObject.tag == "Rotor")
         {
-            if (hittedObject.tag == "HittableBlock")
-            {
-                Debug.Log("OK");
-            } else
-            {
-                ROTOR hittedMotor = ownHittedObject.transform.parent.parent.GetComponent<Motor>().motorPosition;
+            ROTOR hittedMotor = ownHittedObject.transform.parent.parent.GetComponent<Motor>().motorPosition;
 
-                switch (hittedMotor)
-                {
-                    case ROTOR.LF:
-                        rotorStateLF = false;
-                        break;
-                    case ROTOR.RF:
-                        rotorStateRF = false;
-                        break;
-                    case ROTOR.LB:
-                        rotorStateLB = false;
-                        break;
-                    case ROTOR.RB:
-                        rotorStateRB = false;
-                        break;
-                }
+            switch (hittedMotor)
+            {
+                case ROTOR.LF:
+                    rotorStateLF = false;
+                    break;
+                case ROTOR.RF:
+                    rotorStateRF = false;
+                    break;
+                case ROTOR.LB:
+                    rotorStateLB = false;
+                    break;
+                case ROTOR.RB:
+                    rotorStateRB = false;
+                    break;
             }
-
         }
 
         //Debug.Log(collision.GetContact(0).thisCollider.gameObject.tag + " - " + collision.GetContact(0).otherCollider.gameObject.tag);
+    }
+
+    //Hittables / Gates
+    private void OnTriggerEnter(Collider other)
+    {
+        GameObject hittedSpawnable = other.gameObject;
+
+        if (hittedSpawnable.tag == "Gate" || hittedSpawnable.tag == "HittableBlock")
+        {
+            SpawnableObject spawnedObject;
+
+            //gate collider does not have the script & only hittable not complete gate would be destroyed later
+            if (hittedSpawnable.tag == "Gate")
+            {
+                hittedSpawnable = hittedSpawnable.transform.parent.gameObject;
+            }
+
+            spawnedObject = hittedSpawnable.GetComponent<SpawnableObject>();
+
+            if (spawnedObject.cleared)
+            {
+                droneAI.Scored(spawnedObject.pointsForClearing);
+                Destroy(hittedSpawnable);
+            }
+        }
     }
 }

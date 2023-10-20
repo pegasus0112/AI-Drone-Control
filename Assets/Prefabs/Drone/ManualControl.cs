@@ -44,7 +44,7 @@ public class ManualControl : MonoBehaviour
 
         roll = rollAxis.ReadValue<float>();
         //Debug.Log("roll " + roll);
-        
+
         yaw = yawAxis.ReadValue<float>();
         //Debug.Log("yaw " + yaw);
     }

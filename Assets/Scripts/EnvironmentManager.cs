@@ -8,9 +8,9 @@ public class EnvironmentManager : MonoBehaviour
     public enum Spawnables
     {
         NONE,
-        HITTABLEBLOCKS,
-        BIGGATES,
-        SMALLGATES
+        HITTABLEBLOCK,
+        BIGGATE,
+        SMALLGATE
     }
 
     public bool inTraining = false;
@@ -18,6 +18,9 @@ public class EnvironmentManager : MonoBehaviour
     [Header("Setup")]
     public GameObject drone;
     [Range(5, 25)] public int environmentSize = 5;
+
+    [Space(10)]
+    [Range(0, 1)] public float hittableColorTransparecy = 1;
     public Spawnables spawnables;
 
     public Transform ground;
@@ -42,10 +45,11 @@ public class EnvironmentManager : MonoBehaviour
 
     private void Update()
     {
-        if(inTraining)
+        if (inTraining)
         {
             //checkSpawnabels exist
-        } else
+        }
+        else
         {
             PreapareEnvironment();
         }
@@ -77,28 +81,28 @@ public class EnvironmentManager : MonoBehaviour
 
     private void PlaceSpawnables()
     {
-        switch(spawnables)
+        switch (spawnables)
         {
             case Spawnables.NONE:
                 break;
-            case Spawnables.HITTABLEBLOCKS:
+            case Spawnables.HITTABLEBLOCK:
 
                 break;
-            case Spawnables.SMALLGATES:
+            case Spawnables.SMALLGATE:
                 break;
-            case Spawnables.BIGGATES:
+            case Spawnables.BIGGATE:
                 break;
         }
     }
 
     private void PlaceWallsBasedOnEnvSize()
     {
-        ground.localScale 
-            = top.localScale 
-            = front.localScale 
-            = back.localScale 
-            = left.localScale 
-            = right.localScale 
+        ground.localScale
+            = top.localScale
+            = front.localScale
+            = back.localScale
+            = left.localScale
+            = right.localScale
             = new Vector3(environmentSize, 1, environmentSize);
 
         top.position = new Vector3(0, 10 * environmentSize, 0);

@@ -11,7 +11,7 @@ public class DroneAI : Agent
 {
     [Header("Status")]
     public bool selfPlay = true;
-    
+
 
     [Space(10)]
     [Header("Setup")]
@@ -41,16 +41,17 @@ public class DroneAI : Agent
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(droneHandler.CheckRotorGotDestroyed())
+        if (droneHandler.CheckRotorGotDestroyed())
         {
             RequestDecision();
-        } else
+        }
+        else
         {
             ResettingControls();
             environmentManager.EndTraining();
@@ -68,7 +69,7 @@ public class DroneAI : Agent
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
-        if(selfPlay)
+        if (selfPlay)
         {
             var continuousActionsOut = actionsOut.ContinuousActions;
 
@@ -87,5 +88,11 @@ public class DroneAI : Agent
         droneControl.yaw = actionBuffers.ContinuousActions[1];
         droneControl.pitch = actionBuffers.ContinuousActions[2];
         droneControl.roll = actionBuffers.ContinuousActions[3];
+    }
+
+    public void Scored(float points)
+    {
+        Debug.Log("Drone scored " + points);
+        AddReward(points);
     }
 }

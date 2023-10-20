@@ -305,9 +305,9 @@ MonoBehaviour:
   right: {fileID: 7071101829127223332}
   front: {fileID: 5905939274972129067}
   back: {fileID: 2990561555402709746}
-  hittableBlock: {fileID: 405263673752432153, guid: 1c9d603c018b3ac428ce0a69621743e3, type: 3}
+  hittableBlock: {fileID: 3303939040269964123, guid: c20c31bad412bf44c8d89353667be782, type: 3}
   smallGate: {fileID: 2147506329715961165, guid: e5ce5017606e8fa4a971091f9120642c, type: 3}
-  bigGate: {fileID: 0}
+  bigGate: {fileID: 2147506329715961165, guid: 268125583d6048d45ac635419ec120bb, type: 3}
 --- !u!1 &5568966159900331245
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,6 +788,10 @@ PrefabInstance:
       propertyPath: environmentManager
       value: 
       objectReference: {fileID: 4024019001229936181}
+    - target: {fileID: 5043874156345446804, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
+      propertyPath: droneAI
+      value: 
+      objectReference: {fileID: 5946377372552653289}
     - target: {fileID: 8046368367370664421, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
       propertyPath: m_Name
       value: Drone
@@ -802,6 +806,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8046368367370664421, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
   m_PrefabInstance: {fileID: 8824220567626253567}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5946377372552653289 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2949905505468083478, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
+  m_PrefabInstance: {fileID: 8824220567626253567}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576150728221555994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a28c3e35d5d8034088cb5970e03faa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7125643423865335279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1771800497772587280, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
