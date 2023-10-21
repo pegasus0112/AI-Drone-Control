@@ -14,9 +14,10 @@ public class SpawnableObject : MonoBehaviour
 
     public float maxGateClearTime = 4;
 
-    [Range(3, 20)] public float minDistanceToOther = 3;
+    [Range(3, 20)] public float minDistanceToOtherObjects = 3;
     public float hittableMaterialTransparency = 1;
 
+    public SphereCollider sphereCollider;
 
     public GameObject hittablepart;
 
@@ -24,6 +25,8 @@ public class SpawnableObject : MonoBehaviour
 
     private void Start()
     {
+        sphereCollider.radius = minDistanceToOtherObjects;
+
         Color materialOfHittable = hittablepart.GetComponent<MeshRenderer>().material.color;
         materialOfHittable.a = hittableMaterialTransparency;
         hittablepart.GetComponent<MeshRenderer>().material.color = materialOfHittable;
@@ -32,7 +35,7 @@ public class SpawnableObject : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, minDistanceToOther);
+        Gizmos.DrawWireSphere(transform.position, minDistanceToOtherObjects);
     }
 
     public void GateHitted()

@@ -1,10 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class DroneAI : Agent
@@ -80,6 +76,11 @@ public class DroneAI : Agent
             continuousActionsOut[1] = manualControl.yaw;
             continuousActionsOut[2] = manualControl.pitch;
             continuousActionsOut[3] = manualControl.roll;
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                environmentManager.EndTraining();
+            }
         }
     }
 

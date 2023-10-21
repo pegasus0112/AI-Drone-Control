@@ -1101,6 +1101,7 @@ GameObject:
   - component: {fileID: 2194161334857023949}
   - component: {fileID: 7557050737700104898}
   - component: {fileID: 7465639956246027928}
+  - component: {fileID: 7541884500412723300}
   m_Layer: 0
   m_Name: BigGate
   m_TagString: Untagged
@@ -1143,8 +1144,9 @@ MonoBehaviour:
   pointsForClearing: 10
   type: 2
   maxGateClearTime: 4
-  minDistanceToOther: 10
+  minDistanceToOtherObjects: 15
   hittableMaterialTransparency: 1
+  sphereCollider: {fileID: 7541884500412723300}
   hittablepart: {fileID: 17564485030585500}
 --- !u!54 &7465639956246027928
 Rigidbody:
@@ -1173,6 +1175,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &7541884500412723300
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147506329715961165}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 15
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3320026570068600609
 GameObject:
   m_ObjectHideFlags: 0

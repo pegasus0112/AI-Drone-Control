@@ -435,6 +435,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   droneControl: {fileID: 1326000320420491401}
+  droneAI: {fileID: 0}
+  droneFrameState: 1
   rotorStateLF: 1
   rotorStateRF: 1
   rotorStateLB: 1
@@ -477,10 +479,11 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
+  selfPlay: 1
   droneHandler: {fileID: 5043874156345446804}
   droneControl: {fileID: 1326000320420491401}
   droneRig: {fileID: 7963775248013033728}
-  selfPlay: 1
+  environmentManager: {fileID: 0}
   manualControl: {fileID: 3104508842387288139}
 --- !u!114 &3104508842387288139
 MonoBehaviour:
@@ -605,14 +608,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1771800497772587280}
     m_Modifications:
+    - target: {fileID: 1235551607915724293, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7a10a23ac64ba764eae179c040f41fe0, type: 2}
     - target: {fileID: 2035201325631582784, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
       propertyPath: m_Name
       value: Motor CCW (LB)
       objectReference: {fileID: 0}
+    - target: {fileID: 2355466553465612001, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7a10a23ac64ba764eae179c040f41fe0, type: 2}
+    - target: {fileID: 5127898057413283500, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7a10a23ac64ba764eae179c040f41fe0, type: 2}
     - target: {fileID: 5931080440594310372, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 6298815070635566918, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7a10a23ac64ba764eae179c040f41fe0, type: 2}
+    - target: {fileID: 7810570241475478390, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7a10a23ac64ba764eae179c040f41fe0, type: 2}
     - target: {fileID: 8251422751558014544, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -653,6 +676,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8398635492353025031, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7a10a23ac64ba764eae179c040f41fe0, type: 2}
     - target: {fileID: 8982913601769202708, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
       propertyPath: droneRig
       value: 
@@ -669,6 +696,10 @@ PrefabInstance:
       propertyPath: toCheckGroundDistance
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 9153942923307277808, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7a10a23ac64ba764eae179c040f41fe0, type: 2}
     m_RemovedComponents:
     - {fileID: 5715964214339261190, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
     m_RemovedGameObjects: []
@@ -699,14 +730,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1771800497772587280}
     m_Modifications:
+    - target: {fileID: 1235551607915724293, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 563cfb119d0f36149b0538bd49a77976, type: 2}
     - target: {fileID: 2035201325631582784, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
       propertyPath: m_Name
       value: Motor CCW (RF)
       objectReference: {fileID: 0}
+    - target: {fileID: 2355466553465612001, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 563cfb119d0f36149b0538bd49a77976, type: 2}
+    - target: {fileID: 5127898057413283500, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 563cfb119d0f36149b0538bd49a77976, type: 2}
     - target: {fileID: 5931080440594310372, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 6298815070635566918, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 563cfb119d0f36149b0538bd49a77976, type: 2}
+    - target: {fileID: 7810570241475478390, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 563cfb119d0f36149b0538bd49a77976, type: 2}
     - target: {fileID: 8251422751558014544, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -747,6 +798,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8398635492353025031, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 563cfb119d0f36149b0538bd49a77976, type: 2}
     - target: {fileID: 8982913601769202708, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
       propertyPath: droneRig
       value: 
@@ -763,6 +818,10 @@ PrefabInstance:
       propertyPath: toCheckGroundDistance
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 9153942923307277808, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 563cfb119d0f36149b0538bd49a77976, type: 2}
     m_RemovedComponents:
     - {fileID: 5715964214339261190, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
     m_RemovedGameObjects: []
@@ -793,10 +852,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1771800497772587280}
     m_Modifications:
+    - target: {fileID: 976458262098744595, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 563cfb119d0f36149b0538bd49a77976, type: 2}
+    - target: {fileID: 1235551607915724293, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 563cfb119d0f36149b0538bd49a77976, type: 2}
     - target: {fileID: 2035201325631582784, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
       propertyPath: m_Name
       value: Motor CW (LF)
       objectReference: {fileID: 0}
+    - target: {fileID: 2147378574878899449, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 563cfb119d0f36149b0538bd49a77976, type: 2}
+    - target: {fileID: 2355466553465612001, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 563cfb119d0f36149b0538bd49a77976, type: 2}
+    - target: {fileID: 2792337048391833801, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 563cfb119d0f36149b0538bd49a77976, type: 2}
+    - target: {fileID: 3867942363750106703, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 563cfb119d0f36149b0538bd49a77976, type: 2}
+    - target: {fileID: 4479135474750619576, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 563cfb119d0f36149b0538bd49a77976, type: 2}
     - target: {fileID: 8251422751558014544, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -879,10 +966,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1771800497772587280}
     m_Modifications:
+    - target: {fileID: 976458262098744595, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7a10a23ac64ba764eae179c040f41fe0, type: 2}
+    - target: {fileID: 1235551607915724293, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7a10a23ac64ba764eae179c040f41fe0, type: 2}
     - target: {fileID: 2035201325631582784, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
       propertyPath: m_Name
       value: Motor CW (RB)
       objectReference: {fileID: 0}
+    - target: {fileID: 2147378574878899449, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7a10a23ac64ba764eae179c040f41fe0, type: 2}
+    - target: {fileID: 2355466553465612001, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7a10a23ac64ba764eae179c040f41fe0, type: 2}
+    - target: {fileID: 2792337048391833801, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7a10a23ac64ba764eae179c040f41fe0, type: 2}
+    - target: {fileID: 3867942363750106703, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7a10a23ac64ba764eae179c040f41fe0, type: 2}
+    - target: {fileID: 4479135474750619576, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7a10a23ac64ba764eae179c040f41fe0, type: 2}
     - target: {fileID: 8251422751558014544, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
