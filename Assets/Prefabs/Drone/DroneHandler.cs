@@ -17,7 +17,8 @@ public class DroneHandler : MonoBehaviour
     public DroneControl droneControl;
     public DroneAI droneAI;
 
-    //are rotors ok?
+    //are drone parts okay?
+    public bool droneFrameState = true;
     public bool rotorStateLF = true;
     public bool rotorStateRF = true;
     public bool rotorStateLB = true;
@@ -29,6 +30,7 @@ public class DroneHandler : MonoBehaviour
     //important for resetting state after restarting training
     private void OnEnable()
     {
+        droneFrameState = true;
         rotorStateLF = true;
         rotorStateRF = true;
         rotorStateLB = true;
@@ -56,9 +58,9 @@ public class DroneHandler : MonoBehaviour
              | droneControl.motorRB.isGrounded;
     }
 
-    public bool CheckRotorGotDestroyed()
+    public bool CheckPartsGotDestroyed()
     {
-        return rotorStateLF && rotorStateRF && rotorStateLB && rotorStateRB;
+        return droneFrameState && rotorStateLF && rotorStateRF && rotorStateLB && rotorStateRB;
     }
 
     //Walls & Ground
@@ -68,6 +70,8 @@ public class DroneHandler : MonoBehaviour
         if (ownHittedObject.tag == "Rotor")
         {
             ROTOR hittedMotor = ownHittedObject.transform.parent.parent.GetComponent<Motor>().motorPosition;
+
+            Debug.Log(hittedMotor);
 
             switch (hittedMotor)
             {
@@ -84,6 +88,9 @@ public class DroneHandler : MonoBehaviour
                     rotorStateRB = false;
                     break;
             }
+        } else if(ownHittedObject.tag == "Drone")
+        {
+            droneFrameState = false;
         }
 
         //Debug.Log(collision.GetContact(0).thisCollider.gameObject.tag + " - " + collision.GetContact(0).otherCollider.gameObject.tag);

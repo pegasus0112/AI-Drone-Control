@@ -70,17 +70,17 @@ public class SpawnableObject : MonoBehaviour
     //IMPORTANT: way cheaper because not in update and to permanent check
     private void ResetGateIfTimout()
     {
-        if (lastGateHit == -1)
-        {
-            lastGateHit = Time.time;
-        }
-
         float currentTime = Time.time;
-        if (currentTime - lastGateHit > maxGateClearTime)
+
+        if (clearedMotors.Count == 0)
+        {
+            lastGateHit = currentTime;
+        }
+        else if (currentTime - lastGateHit > maxGateClearTime)
         {
             clearedMotors.Clear();
         }
-        lastGateHit = Time.time;
 
+        lastGateHit = Time.time;
     }
 }

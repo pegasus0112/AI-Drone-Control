@@ -73,7 +73,7 @@ public class EnvironmentManager : MonoBehaviour
         drone.GetComponent<Rigidbody>().velocity = Vector3.zero;
         drone.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
-        drone.transform.position = Vector3.zero;
+        drone.transform.position = new Vector3(0, 0.06517515f, 0);
         drone.transform.rotation = new Quaternion(0, 0, 0, 0);
 
         drone.SetActive(true);

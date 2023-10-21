@@ -298,6 +298,7 @@ MonoBehaviour:
   inTraining: 0
   drone: {fileID: 1576150728221555994}
   environmentSize: 5
+  hittableColorTransparecy: 1
   spawnables: 0
   ground: {fileID: 4777745633417344962}
   top: {fileID: 4723041531208523218}
@@ -740,13 +741,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6741765316954676616}
     m_Modifications:
+    - target: {fileID: 46998416559955718, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
+      propertyPath: m_TagString
+      value: Drone
+      objectReference: {fileID: 0}
     - target: {fileID: 1771800497772587280, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1771800497772587280, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.06517515
       objectReference: {fileID: 0}
     - target: {fileID: 1771800497772587280, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -788,10 +793,18 @@ PrefabInstance:
       propertyPath: environmentManager
       value: 
       objectReference: {fileID: 4024019001229936181}
+    - target: {fileID: 2994709532466879502, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5043874156345446804, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
       propertyPath: droneAI
       value: 
       objectReference: {fileID: 5946377372552653289}
+    - target: {fileID: 7963775248013033728, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8046368367370664421, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
       propertyPath: m_Name
       value: Drone

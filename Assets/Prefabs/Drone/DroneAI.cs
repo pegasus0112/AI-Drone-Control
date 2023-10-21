@@ -28,6 +28,7 @@ public class DroneAI : Agent
 
     public override void CollectObservations(VectorSensor sensor)
     {
+        sensor.AddObservation(droneHandler.droneFrameState);
         sensor.AddObservation(droneHandler.rotorStateLF);
         sensor.AddObservation(droneHandler.rotorStateRF);
         sensor.AddObservation(droneHandler.rotorStateLB);
@@ -47,7 +48,7 @@ public class DroneAI : Agent
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (droneHandler.CheckRotorGotDestroyed())
+        if (droneHandler.CheckPartsGotDestroyed())
         {
             RequestDecision();
         }
