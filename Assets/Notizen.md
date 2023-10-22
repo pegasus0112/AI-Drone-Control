@@ -67,6 +67,7 @@
 * Besonderheiten: 
     * Yaw
     * CalculateRatesValue (Rates über Funktion f(x))
+    * force multipliler und yaw multiplier um verhalten anzupassen
 
 ### KI-Basis
 * Wissen:
