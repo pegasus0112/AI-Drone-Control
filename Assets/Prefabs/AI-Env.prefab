@@ -842,10 +842,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6741765316954676616}
     m_Modifications:
-    - target: {fileID: 46998416559955718, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
-      propertyPath: m_TagString
-      value: Drone
-      objectReference: {fileID: 0}
     - target: {fileID: 1771800497772587280, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -887,25 +883,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2949905505468083478, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
-      propertyPath: selfPlay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2949905505468083478, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
       propertyPath: environmentManager
       value: 
       objectReference: {fileID: 4024019001229936181}
-    - target: {fileID: 2994709532466879502, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
-      propertyPath: m_BrainParameters.VectorObservationSize
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5043874156345446804, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
-      propertyPath: droneAI
-      value: 
-      objectReference: {fileID: 5946377372552653289}
-    - target: {fileID: 7963775248013033728, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8046368367370664421, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
       propertyPath: m_Name
       value: Drone
@@ -920,17 +900,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8046368367370664421, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
   m_PrefabInstance: {fileID: 8824220567626253567}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5946377372552653289 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2949905505468083478, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
-  m_PrefabInstance: {fileID: 8824220567626253567}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1576150728221555994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a28c3e35d5d8034088cb5970e03faa0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &7125643423865335279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1771800497772587280, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}

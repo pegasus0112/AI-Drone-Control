@@ -1,3 +1,4 @@
+using System;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
@@ -30,6 +31,8 @@ public class DroneAI : Agent
         sensor.AddObservation(droneHandler.rotorStateLB);
         sensor.AddObservation(droneHandler.rotorStateRB);
 
+        sensor.AddObservation(droneHandler.isGrounded);
+
         //later add acceleration & rotation
         sensor.AddObservation(new Vector3(droneRig.velocity.x, droneRig.velocity.y, droneRig.velocity.z));
         sensor.AddObservation(gameObject.transform.rotation);
@@ -50,19 +53,20 @@ public class DroneAI : Agent
         }
         else
         {
-            ResettingControls();
             environmentManager.EndTraining();
             //GAME OVER
         }
+
+        AddRewardAndPenalties();
     }
 
-    private void ResettingControls()
+    private void AddRewardAndPenalties()
     {
-        droneControl.throttle = 0;
-        droneControl.yaw = 0;
-        droneControl.pitch = 0;
-        droneControl.roll = 0;
+        //reward for flying?
+        //penalty for IsGrounded+
     }
+
+
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
@@ -71,16 +75,10 @@ public class DroneAI : Agent
             var continuousActionsOut = actionsOut.ContinuousActions;
 
             manualControl.ReadUserInputJoysticks();
-            continuousActionsOut[1] = Input.GetAxis("Horizontal");
             continuousActionsOut[0] = manualControl.throttle;
             continuousActionsOut[1] = manualControl.yaw;
             continuousActionsOut[2] = manualControl.pitch;
             continuousActionsOut[3] = manualControl.roll;
-
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                environmentManager.EndTraining();
-            }
         }
     }
 

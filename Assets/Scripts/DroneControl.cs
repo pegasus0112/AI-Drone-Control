@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
 
 public class DroneControl : MonoBehaviour
 {
@@ -30,9 +31,9 @@ public class DroneControl : MonoBehaviour
     private float newMotorPowerRF = 0;
     private float newMotorPowerRB = 0;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
+        ResetControls();
     }
 
     // Update is called once per frame
@@ -94,6 +95,13 @@ public class DroneControl : MonoBehaviour
         newMotorPowerRB = Math.Clamp(newMotorPowerRB, 0, 1);
         newMotorPowerLB = Math.Clamp(newMotorPowerLB, 0, 1);
         newMotorPowerRF = Math.Clamp(newMotorPowerRF, 0, 1);
+    }
+    private void ResetControls()
+    {
+        throttle = 0;
+        yaw = 0;
+        pitch = 0;
+        roll = 0;
     }
 
     //only use for ROLL, YAW, PITCH

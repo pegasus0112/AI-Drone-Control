@@ -30,18 +30,8 @@ public class Motor : MonoBehaviour
     [Header("Physics")]
     public Transform forcePoint;
 
-    [Space(10)]
-    [Header("State")]
-    public bool rotorIsOkay = true;
-
     //drone rigidbody shared by all motors
     public Rigidbody droneRig;
-
-    //important for resetting state efater restarting training
-    private void OnEnable()
-    {
-        rotorIsOkay = true;
-    }
 
     // Start is called before the first frame update
     void Start()
