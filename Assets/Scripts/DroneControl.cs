@@ -22,14 +22,7 @@ public class DroneControl : MonoBehaviour
 
     [Space(10)]
     [Header("Settings")]
-    [Range(5, 20)] public float yawMultiplier;
-
-
-
-    private float newMotorPowerLF = 0;
-    private float newMotorPowerLB = 0;
-    private float newMotorPowerRF = 0;
-    private float newMotorPowerRB = 0;
+    [Range(5, 50)] public float yawMultiplier;
 
     private void OnEnable()
     {
@@ -40,18 +33,12 @@ public class DroneControl : MonoBehaviour
     void FixedUpdate()
     {
         CalculateMotorPower();
-        UpdateMotorPower();
     }
 
-    private void UpdateMotorPower()
-    {
-        motorLF.motorSpeed = newMotorPowerLF;
-        motorRF.motorSpeed = newMotorPowerRF;
-        motorLB.motorSpeed = newMotorPowerLB;
-        motorRB.motorSpeed = newMotorPowerRB;
-    }
-
-    private void CalculateMotorPower()
+    /*
+     * To remove
+     *     
+     private void CalculateMotorPower()
     {
         //throttle
         newMotorPowerLF = throttle;
@@ -84,11 +71,6 @@ public class DroneControl : MonoBehaviour
         AddTorqueRotation(calculatedYaw);
     }
 
-    private void AddTorqueRotation(float calculatedYaw)
-    {
-        gameObject.transform.Rotate(new Vector3(0, calculatedYaw * yawMultiplier, 0));
-    }
-
     private void ClampMotorPower()
     {
         newMotorPowerLF = Math.Clamp(newMotorPowerLF, 0, 1);
@@ -96,6 +78,29 @@ public class DroneControl : MonoBehaviour
         newMotorPowerLB = Math.Clamp(newMotorPowerLB, 0, 1);
         newMotorPowerRF = Math.Clamp(newMotorPowerRF, 0, 1);
     }
+     */
+
+
+    private void CalculateMotorPower()
+    {
+        float calculatedYaw = CalculateRatesValue(yaw);
+        float calculatedPitch = CalculateRatesValue(pitch);
+        float calculatedRoll = CalculateRatesValue(roll);
+
+        motorLF.motorSpeed = (throttle + ((-calculatedYaw - calculatedPitch + calculatedRoll) / 3)) / 2;
+        motorRF.motorSpeed = (throttle + ((calculatedYaw - calculatedPitch - calculatedRoll) / 3)) / 2;
+        motorLB.motorSpeed = (throttle + ((calculatedYaw + calculatedPitch + calculatedRoll) / 3)) / 2;
+        motorRB.motorSpeed = (throttle + ((-calculatedYaw + calculatedPitch - calculatedRoll) / 3)) / 2;
+
+        //Debug.Log(newMotorPowerLF + " - " + newMotorPowerRF + " - " + newMotorPowerLB + " - " + newMotorPowerRB);
+        AddTorqueRotation(calculatedYaw);
+    }
+
+    private void AddTorqueRotation(float calculatedYaw)
+    {
+        gameObject.transform.Rotate(new Vector3(0, calculatedYaw * yawMultiplier, 0));
+    }
+
     private void ResetControls()
     {
         throttle = 0;
