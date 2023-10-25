@@ -24,18 +24,6 @@ public class DroneControl : MonoBehaviour
     [Header("Settings")]
     [Range(5, 50)] public float yawMultiplier;
 
-    public testing newControl = testing.normal;
-
-    private float newMotorPowerLF = 0;
-    private float newMotorPowerLB = 0;
-    private float newMotorPowerRF = 0;
-    private float newMotorPowerRB = 0;
-
-    public enum testing
-    {
-        normal,new1,new2
-    }
-
     private void OnEnable()
     {
         ResetControls();

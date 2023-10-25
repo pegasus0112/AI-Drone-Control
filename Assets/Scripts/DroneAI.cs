@@ -19,6 +19,17 @@ public class DroneAI : Agent
     public EnvironmentManager environmentManager;
 
     [Space(10)]
+    [Header("Reward / Pentalies")]
+    //reward splitted over 1min
+    public float rewardForFlying = 3;
+
+    [Space(5)]
+    //penalty every 1s
+    public float penaltyForGrounded = -1;
+    public float penalyForCrashing = -5;
+
+
+    [Space(10)]
     [Header("Manual Control Setup")]
     public ManualControl manualControl;
 
@@ -55,6 +66,7 @@ public class DroneAI : Agent
         {
             environmentManager.EndTraining();
             //GAME OVER
+            AddReward(penalyForCrashing);
         }
 
         AddRewardAndPenalties();
@@ -62,7 +74,13 @@ public class DroneAI : Agent
 
     private void AddRewardAndPenalties()
     {
-        //reward for flying?
+        if(droneHandler.isGrounded)
+        {
+            AddReward(penaltyForGrounded * Time.deltaTime);
+        } else
+        {
+            AddReward(rewardForFlying / 60 * Time.deltaTime);
+        }
         //penalty for IsGrounded+
     }
 
