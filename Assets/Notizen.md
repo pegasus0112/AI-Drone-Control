@@ -1,5 +1,7 @@
 # Notizen
 
+## Grundlagen
+
 ### Drohne
 * Rigidbody
     * CollisionDetection muss Continous sein
@@ -67,6 +69,7 @@
 * Besonderheiten: 
     * Yaw
     * CalculateRatesValue (Rates über Funktion f(x))
+    * force multipliler und yaw multiplier um verhalten anzupassen
 
 ### KI-Basis
 * Wissen:
@@ -76,6 +79,10 @@
         * Rotation der Drohne
         * Beschleunigung der Drohne in alle Richtungen
     * Kamera-Sensor
+* PAP für Decesion Requester
+    * PhysicsEngine arbeitet in anderem Zyklus
+    * Drohne fragt Aktion an, bevor letze umgesetzt werden konnte
+    * Decision Requester muss in FixedUpdate()
 * prüft auf Zustände der Drohne (Frame & Rotoren in DroneHandler)
 
 * Manuelle Steuerung über SelfPlay / Heuristic
@@ -83,4 +90,22 @@
 
 ## Planung Training
 
-* drawio
+# KI
+* Deep Reinforcment Learning Learning erklären (und warum hier)
+* zwei Algorithmen für Reinforcment Learning zur Verfügung:
+    * PPO
+    * SAC
+* im folgenden Training SAC vs PPO mit unterschiedlichen Hyperparamentern
+* zwei Algorithmen weil diese unterschiedlich gut sein können
+* Insgesamt 12 Drohnen
+* 6 Drohnen pro Algorithmus
+* 2 Drohnen pro Hyperparamter
+
+## Training
+* 1. Training
+    * alle mit default Parametern 
+    * außer Steps 500.00 sind zu wenig -> 3 Mio (Katz und Maus bei 2.4 verhalten erkennbar)
+    * PPO: https://github.com/Unity-Technologies/ml-agents/blob/develop/config/ppo/Basic.yaml
+    * SAC: https://github.com/Unity-Technologies/ml-agents/blob/develop/config/sac/Basic.yaml
+    * Auswertung durch verhalten & DIagramm welche Anpassungen getätigt werden müssen
+
