@@ -104,7 +104,7 @@ public class EnvironmentManager : MonoBehaviour
         switch (spawnables)
         {
             case Spawnables.NONE:
-                Debug.Log("Envorinment without spawnables");
+                //Debug.Log("Envorinment without spawnables");
                 break;
             case Spawnables.HITTABLEBLOCK:
                 for(int i=0; i< spawnableCount; i++)

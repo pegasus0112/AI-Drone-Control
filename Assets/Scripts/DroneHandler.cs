@@ -58,7 +58,7 @@ public class DroneHandler : MonoBehaviour
              | droneControl.motorRB.isGrounded;
     }
 
-    public bool CheckPartsGotDestroyed()
+    public bool CheckPartsAreOkay()
     {
         return droneFrameState && rotorStateLF && rotorStateRF && rotorStateLB && rotorStateRB;
     }

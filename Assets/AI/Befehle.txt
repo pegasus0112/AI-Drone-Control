@@ -1,13 +1,9 @@
 Python Environment:
 
-C:\Benutzer\Alex\Dokumente\GitHub\training-env\Scripts\activate
+anaconda powershell öffnen
+conda activate mlagents
 
-
-
-
-
-
-
+cd bleisingeral\AI-Drone-Control\Assets\AI
 
 
 

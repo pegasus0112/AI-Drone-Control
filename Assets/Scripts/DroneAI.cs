@@ -20,13 +20,10 @@ public class DroneAI : Agent
 
     [Space(10)]
     [Header("Reward / Pentalies")]
-    //reward splitted over 1min
-    public float rewardForFlying = 3;
+    public float rewardForFlying = 1;
 
     [Space(5)]
-    //penalty every 1s
-    public float penaltyForGrounded = -1;
-    public float penalyForCrashing = -5;
+    public float penalyForCrashing = -10;
 
 
     [Space(10)]
@@ -58,15 +55,15 @@ public class DroneAI : Agent
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (droneHandler.CheckPartsGotDestroyed())
+        if (droneHandler.CheckPartsAreOkay())
         {
             RequestDecision();
         }
         else
         {
-            environmentManager.EndTraining();
             //GAME OVER
             AddReward(penalyForCrashing);
+            environmentManager.EndTraining();
         }
 
         AddRewardAndPenalties();
@@ -76,10 +73,10 @@ public class DroneAI : Agent
     {
         if(droneHandler.isGrounded)
         {
-            AddReward(penaltyForGrounded * Time.deltaTime);
+            AddReward(-rewardForFlying * Time.deltaTime);
         } else
         {
-            AddReward(rewardForFlying / 60 * Time.deltaTime);
+            AddReward(rewardForFlying * Time.deltaTime);
         }
         //penalty for IsGrounded+
     }
