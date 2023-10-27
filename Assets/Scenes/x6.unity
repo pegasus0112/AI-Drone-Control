@@ -149,7 +149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: penalyForCrashing
-      value: -10
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BehaviorName
@@ -226,7 +226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: penalyForCrashing
-      value: -10
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BehaviorName
@@ -303,7 +303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: penalyForCrashing
-      value: -10
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BehaviorName
@@ -380,7 +380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: penalyForCrashing
-      value: -10
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BehaviorName
@@ -457,7 +457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: penalyForCrashing
-      value: -10
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BehaviorName
@@ -720,7 +720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: penalyForCrashing
-      value: -10
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BehaviorName
@@ -797,7 +797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: penalyForCrashing
-      value: -10
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BehaviorName
@@ -874,7 +874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: penalyForCrashing
-      value: -10
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BehaviorName
