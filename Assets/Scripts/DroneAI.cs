@@ -62,7 +62,7 @@ public class DroneAI : Agent
         else
         {
             //GAME OVER
-            AddReward(penalyForCrashing);
+            //AddReward(penalyForCrashing);
             environmentManager.EndTraining();
         }
 
