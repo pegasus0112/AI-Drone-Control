@@ -23,7 +23,7 @@ public class EnvironmentManager : MonoBehaviour
     [Range(1, 40)] public int spawnableCount = 1;
     [Range(30, 500)] public int placementTries = 30;
     [Range(0, 1)] public float hittableColorTransparecy = 1;
-
+    [Range(1, 360)] public float maxTrainingLength = 120;
     [Space(10)]
     [Header("Setup")]
     public GameObject drone;
@@ -49,6 +49,7 @@ public class EnvironmentManager : MonoBehaviour
     public GameObject smallGate;
     public GameObject bigGate;
 
+    private float trainingStartTime;
 
     private void Start()
     {
@@ -61,7 +62,9 @@ public class EnvironmentManager : MonoBehaviour
     {
         if (inTraining)
         {
-            if(spawnables != Spawnables.NONE && spawnedObjects.childCount <= 0)
+            CheckTrainingLength();
+
+            if (spawnables != Spawnables.NONE && spawnedObjects.childCount <= 0)
             {
                 EndTraining();
             }
@@ -84,8 +87,9 @@ public class EnvironmentManager : MonoBehaviour
         PlaceSpawnables();
 
         inTraining = true;
-
+        
         RestartDrone();
+        trainingStartTime = Time.time;
     }
 
     private void RestartDrone()
@@ -188,5 +192,16 @@ public class EnvironmentManager : MonoBehaviour
     {
         inTraining = false;
         drone.SetActive(false);
+    }
+
+    private void CheckTrainingLength()
+    {
+        float currentTime = Time.time;
+        
+        if (currentTime - trainingStartTime > maxTrainingLength)
+        {
+            Debug.Log("Resetting training because of time");
+            EndTraining();
+        }
     }
 }
