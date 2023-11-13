@@ -548,7 +548,6 @@ MonoBehaviour:
   motorLB: {fileID: 8472049469541116328}
   motorRB: {fileID: 1287192767931090913}
   yawMultiplier: 5.5
-  newControl: 1
 --- !u!114 &2949905505468083478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -570,6 +569,8 @@ MonoBehaviour:
   droneControl: {fileID: 1326000320420491401}
   droneRig: {fileID: 7963775248013033728}
   environmentManager: {fileID: 0}
+  rewardForFlying: 1
+  penalyForCrashing: -10
   manualControl: {fileID: 3104508842387288139}
 --- !u!114 &3104508842387288139
 MonoBehaviour:
@@ -700,8 +701,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 7931647132928011140}
   m_SensorName: CameraSensor
-  m_Width: 133
-  m_Height: 80
+  m_Width: 80
+  m_Height: 50
   m_Grayscale: 0
   m_ObservationType: 0
   m_RuntimeCameraEnable: 0

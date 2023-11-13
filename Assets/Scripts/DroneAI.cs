@@ -44,6 +44,9 @@ public class DroneAI : Agent
         //later add acceleration & rotation
         sensor.AddObservation(new Vector3(droneRig.velocity.x, droneRig.velocity.y, droneRig.velocity.z));
         sensor.AddObservation(gameObject.transform.rotation);
+
+        // y height (relative heigth to ground)
+        sensor.AddObservation(gameObject.transform.position.y - environmentManager.ground.position.y);
     }
 
     // Start is called before the first frame update
