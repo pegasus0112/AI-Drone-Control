@@ -19,7 +19,7 @@ public class EnvironmentManager : MonoBehaviour
 
     [Space(10)]
     [Header("Settings")]
-    [Range(5, 25)] public int environmentSize = 5;
+    [Range(1, 25)] public int environmentSize = 1;
     [Range(1, 40)] public int spawnableCount = 1;
     [Range(30, 500)] public int placementTries = 30;
     [Range(0, 1)] public float hittableColorTransparecy = 1;
@@ -53,7 +53,7 @@ public class EnvironmentManager : MonoBehaviour
     private void Start()
     {
         //setting center
-        center.position = new Vector3(center.position.x, center.position.y + 2 * environmentSize, center.position.z);
+        center.position = new Vector3(center.position.x, center.position.y + 5 * environmentSize, center.position.z);
     }
 
 
