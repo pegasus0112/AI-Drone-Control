@@ -12,6 +12,8 @@ public class DroneAI : Agent
 
     [Space(10)]
     [Header("Setup")]
+
+
     public DroneHandler droneHandler;
     public DroneControl droneControl;
     public Rigidbody droneRig;
@@ -23,7 +25,7 @@ public class DroneAI : Agent
     public float rewardForFlying = 1;
 
     [Space(5)]
-    public float penalyForCrashing = -10;
+    public float penaltyForTooLongGrounded = -10;
 
 
     [Space(10)]
@@ -47,12 +49,6 @@ public class DroneAI : Agent
 
         // y height (relative heigth to ground)
         sensor.AddObservation(gameObject.transform.position.y - environmentManager.ground.position.y);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
     }
 
     // Update is called once per frame
@@ -81,10 +77,7 @@ public class DroneAI : Agent
         {
             AddReward(rewardForFlying * Time.deltaTime);
         }
-        //penalty for IsGrounded+
     }
-
-
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
@@ -112,5 +105,12 @@ public class DroneAI : Agent
     {
         Debug.Log("Drone scored " + points);
         AddReward(points);
+    }
+
+    public void EndEpisodeBecauseTooLongGrounded()
+    {
+        Debug.Log("Resetting training because of ground time");
+        AddReward(penaltyForTooLongGrounded);
+        environmentManager.EndTraining();
     }
 }

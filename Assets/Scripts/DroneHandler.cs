@@ -14,6 +14,11 @@ public class DroneHandler : MonoBehaviour
         RB  // Right Back
     }
 
+    [Header("Settings")]
+    [Range(1, 10)] public float maxGroundTime = 4;
+    private float lastGroundTime;
+
+    [Space(10)]
     public DroneControl droneControl;
     public DroneAI droneAI;
 
@@ -30,6 +35,7 @@ public class DroneHandler : MonoBehaviour
     //important for resetting state after restarting training
     private void OnEnable()
     {
+        lastGroundTime = -1;
         droneFrameState = true;
         rotorStateLF = true;
         rotorStateRF = true;
@@ -48,6 +54,7 @@ public class DroneHandler : MonoBehaviour
     {
         //Everything except controle and AI
         CheckAnyMotorGrounded();
+        ResetDroneIfTooLongOnGround();
     }
 
     private void CheckAnyMotorGrounded()
@@ -61,6 +68,20 @@ public class DroneHandler : MonoBehaviour
     public bool CheckPartsAreOkay()
     {
         return droneFrameState && rotorStateLF && rotorStateRF && rotorStateLB && rotorStateRB;
+    }
+
+    private void ResetDroneIfTooLongOnGround()
+    {
+        float currentTime = Time.time;
+
+        if (isGrounded && lastGroundTime == -1)
+        {
+            lastGroundTime = Time.time;
+        }
+        else if (currentTime - lastGroundTime > maxGroundTime)
+        {
+            droneAI.EndEpisodeBecauseTooLongGrounded();
+        }
     }
 
     //Walls & Ground
