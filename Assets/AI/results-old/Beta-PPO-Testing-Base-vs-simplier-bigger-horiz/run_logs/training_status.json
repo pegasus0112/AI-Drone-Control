@@ -1,0 +1,239 @@
+{
+    "PPO-BASE": {
+        "checkpoints": [
+            {
+                "steps": 7499949,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-BASE\\PPO-BASE-7499949.onnx",
+                "reward": 2.6152377862660656,
+                "creation_time": 1700255583.7411206,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-BASE\\PPO-BASE-7499949.pt"
+                ]
+            },
+            {
+                "steps": 7999987,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-BASE\\PPO-BASE-7999987.onnx",
+                "reward": 4.301537964063195,
+                "creation_time": 1700266850.991305,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-BASE\\PPO-BASE-7999987.pt"
+                ]
+            },
+            {
+                "steps": 8499937,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-BASE\\PPO-BASE-8499937.onnx",
+                "reward": 3.7062852763171708,
+                "creation_time": 1700278088.9379306,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-BASE\\PPO-BASE-8499937.pt"
+                ]
+            },
+            {
+                "steps": 8999995,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-BASE\\PPO-BASE-8999995.onnx",
+                "reward": 3.2558616858361096,
+                "creation_time": 1700289335.34951,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-BASE\\PPO-BASE-8999995.pt"
+                ]
+            },
+            {
+                "steps": 9399519,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-BASE\\PPO-BASE-9399519.onnx",
+                "reward": 3.159999636452525,
+                "creation_time": 1700298314.918902,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-BASE\\PPO-BASE-9399519.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 9399519,
+            "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-BASE.onnx",
+            "reward": 3.159999636452525,
+            "creation_time": 1700298314.918902,
+            "auxillary_file_paths": [
+                "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-BASE\\PPO-BASE-9399519.pt"
+            ]
+        }
+    },
+    "PPO-TH-128": {
+        "checkpoints": [
+            {
+                "steps": 7499945,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-128\\PPO-TH-128-7499945.onnx",
+                "reward": 4.344615230193505,
+                "creation_time": 1700255380.1713676,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-128\\PPO-TH-128-7499945.pt"
+                ]
+            },
+            {
+                "steps": 7999948,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-128\\PPO-TH-128-7999948.onnx",
+                "reward": 3.2175860338169953,
+                "creation_time": 1700266639.5880804,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-128\\PPO-TH-128-7999948.pt"
+                ]
+            },
+            {
+                "steps": 8499972,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-128\\PPO-TH-128-8499972.onnx",
+                "reward": 3.739999771118164,
+                "creation_time": 1700277877.119669,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-128\\PPO-TH-128-8499972.pt"
+                ]
+            },
+            {
+                "steps": 8999974,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-128\\PPO-TH-128-8999974.onnx",
+                "reward": 3.5724997989833356,
+                "creation_time": 1700289116.0389705,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-128\\PPO-TH-128-8999974.pt"
+                ]
+            },
+            {
+                "steps": 9409428,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-128\\PPO-TH-128-9409428.onnx",
+                "reward": 3.9457140688651373,
+                "creation_time": 1700298314.7220492,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-128\\PPO-TH-128-9409428.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 9409428,
+            "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-128.onnx",
+            "reward": 3.9457140688651373,
+            "creation_time": 1700298314.7220492,
+            "auxillary_file_paths": [
+                "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-128\\PPO-TH-128-9409428.pt"
+            ]
+        }
+    },
+    "PPO-TH-512": {
+        "checkpoints": [
+            {
+                "steps": 7499999,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-512\\PPO-TH-512-7499999.onnx",
+                "reward": 2.5282755031667907,
+                "creation_time": 1700255420.3399374,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-512\\PPO-TH-512-7499999.pt"
+                ]
+            },
+            {
+                "steps": 7999981,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-512\\PPO-TH-512-7999981.onnx",
+                "reward": 2.6059996128082275,
+                "creation_time": 1700266704.403961,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-512\\PPO-TH-512-7999981.pt"
+                ]
+            },
+            {
+                "steps": 8499970,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-512\\PPO-TH-512-8499970.onnx",
+                "reward": 2.669047230765933,
+                "creation_time": 1700277961.1051016,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-512\\PPO-TH-512-8499970.pt"
+                ]
+            },
+            {
+                "steps": 8999901,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-512\\PPO-TH-512-8999901.onnx",
+                "reward": 2.4342853341783797,
+                "creation_time": 1700289221.7518806,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-512\\PPO-TH-512-8999901.pt"
+                ]
+            },
+            {
+                "steps": 9404270,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-512\\PPO-TH-512-9404270.onnx",
+                "reward": 2.997187077999115,
+                "creation_time": 1700298314.8180084,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-512\\PPO-TH-512-9404270.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 9404270,
+            "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-512.onnx",
+            "reward": 2.997187077999115,
+            "creation_time": 1700298314.8180084,
+            "auxillary_file_paths": [
+                "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-512\\PPO-TH-512-9404270.pt"
+            ]
+        }
+    },
+    "PPO-TH-256": {
+        "checkpoints": [
+            {
+                "steps": 7499974,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-256\\PPO-TH-256-7499974.onnx",
+                "reward": 3.2866663469208612,
+                "creation_time": 1700255466.8487365,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-256\\PPO-TH-256-7499974.pt"
+                ]
+            },
+            {
+                "steps": 7999882,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-256\\PPO-TH-256-7999882.onnx",
+                "reward": 3.2517642978505763,
+                "creation_time": 1700266731.6465836,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-256\\PPO-TH-256-7999882.pt"
+                ]
+            },
+            {
+                "steps": 8499930,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-256\\PPO-TH-256-8499930.onnx",
+                "reward": 3.8972599094554985,
+                "creation_time": 1700277972.818367,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-256\\PPO-TH-256-8499930.pt"
+                ]
+            },
+            {
+                "steps": 8999947,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-256\\PPO-TH-256-8999947.onnx",
+                "reward": 3.3959995687007902,
+                "creation_time": 1700289220.4319866,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-256\\PPO-TH-256-8999947.pt"
+                ]
+            },
+            {
+                "steps": 9404793,
+                "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-256\\PPO-TH-256-9404793.onnx",
+                "reward": 4.075999626268943,
+                "creation_time": 1700298314.6410868,
+                "auxillary_file_paths": [
+                    "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-256\\PPO-TH-256-9404793.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 9404793,
+            "file_path": "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-256.onnx",
+            "reward": 4.075999626268943,
+            "creation_time": 1700298314.6410868,
+            "auxillary_file_paths": [
+                "results\\Beta-PPO-Testing-Base-vs-simplier-bigger-horiz\\PPO-TH-256\\PPO-TH-256-9404793.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}

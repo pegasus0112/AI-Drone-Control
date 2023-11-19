@@ -1,0 +1,123 @@
+{
+    "PPO-SYS-BASE-HIGHER-REWARD": {
+        "checkpoints": [
+            {
+                "steps": 4999963,
+                "file_path": "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE-HIGHER-REWARD\\PPO-SYS-BASE-HIGHER-REWARD-4999963.onnx",
+                "reward": 11.069472780353145,
+                "creation_time": 1700339345.1642408,
+                "auxillary_file_paths": [
+                    "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE-HIGHER-REWARD\\PPO-SYS-BASE-HIGHER-REWARD-4999963.pt"
+                ]
+            },
+            {
+                "steps": 5999977,
+                "file_path": "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE-HIGHER-REWARD\\PPO-SYS-BASE-HIGHER-REWARD-5999977.onnx",
+                "reward": 12.732243981440456,
+                "creation_time": 1700347104.644899,
+                "auxillary_file_paths": [
+                    "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE-HIGHER-REWARD\\PPO-SYS-BASE-HIGHER-REWARD-5999977.pt"
+                ]
+            },
+            {
+                "steps": 6999987,
+                "file_path": "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE-HIGHER-REWARD\\PPO-SYS-BASE-HIGHER-REWARD-6999987.onnx",
+                "reward": 15.462351908578592,
+                "creation_time": 1700354671.5581875,
+                "auxillary_file_paths": [
+                    "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE-HIGHER-REWARD\\PPO-SYS-BASE-HIGHER-REWARD-6999987.pt"
+                ]
+            },
+            {
+                "steps": 7999918,
+                "file_path": "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE-HIGHER-REWARD\\PPO-SYS-BASE-HIGHER-REWARD-7999918.onnx",
+                "reward": 15.855318154743378,
+                "creation_time": 1700362172.489074,
+                "auxillary_file_paths": [
+                    "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE-HIGHER-REWARD\\PPO-SYS-BASE-HIGHER-REWARD-7999918.pt"
+                ]
+            },
+            {
+                "steps": 8000046,
+                "file_path": "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE-HIGHER-REWARD\\PPO-SYS-BASE-HIGHER-REWARD-8000046.onnx",
+                "reward": 15.855318154743378,
+                "creation_time": 1700362172.6397004,
+                "auxillary_file_paths": [
+                    "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE-HIGHER-REWARD\\PPO-SYS-BASE-HIGHER-REWARD-8000046.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 8000046,
+            "file_path": "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE-HIGHER-REWARD.onnx",
+            "reward": 15.855318154743378,
+            "creation_time": 1700362172.6397004,
+            "auxillary_file_paths": [
+                "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE-HIGHER-REWARD\\PPO-SYS-BASE-HIGHER-REWARD-8000046.pt"
+            ]
+        }
+    },
+    "PPO-SYS-BASE": {
+        "checkpoints": [
+            {
+                "steps": 4999901,
+                "file_path": "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE\\PPO-SYS-BASE-4999901.onnx",
+                "reward": 4.5499998567005,
+                "creation_time": 1700339206.3405635,
+                "auxillary_file_paths": [
+                    "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE\\PPO-SYS-BASE-4999901.pt"
+                ]
+            },
+            {
+                "steps": 5999988,
+                "file_path": "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE\\PPO-SYS-BASE-5999988.onnx",
+                "reward": 3.677974515559175,
+                "creation_time": 1700346933.4647534,
+                "auxillary_file_paths": [
+                    "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE\\PPO-SYS-BASE-5999988.pt"
+                ]
+            },
+            {
+                "steps": 6999980,
+                "file_path": "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE\\PPO-SYS-BASE-6999980.onnx",
+                "reward": 3.9599998221402206,
+                "creation_time": 1700354506.3687375,
+                "auxillary_file_paths": [
+                    "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE\\PPO-SYS-BASE-6999980.pt"
+                ]
+            },
+            {
+                "steps": 7999890,
+                "file_path": "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE\\PPO-SYS-BASE-7999890.onnx",
+                "reward": 3.8204253830332706,
+                "creation_time": 1700362019.153055,
+                "auxillary_file_paths": [
+                    "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE\\PPO-SYS-BASE-7999890.pt"
+                ]
+            },
+            {
+                "steps": 8021619,
+                "file_path": "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE\\PPO-SYS-BASE-8021619.onnx",
+                "reward": 3.8594803523223895,
+                "creation_time": 1700362172.5724251,
+                "auxillary_file_paths": [
+                    "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE\\PPO-SYS-BASE-8021619.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 8021619,
+            "file_path": "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE.onnx",
+            "reward": 3.8594803523223895,
+            "creation_time": 1700362172.5724251,
+            "auxillary_file_paths": [
+                "results\\PPO-SYS-BASE-TIME-SCALE-4\\PPO-SYS-BASE\\PPO-SYS-BASE-8021619.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}

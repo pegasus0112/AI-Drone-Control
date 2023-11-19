@@ -1,0 +1,51 @@
+{
+    "Basic-SAC": {
+        "checkpoints": [
+            {
+                "steps": 460880,
+                "file_path": "results\\Initial-HigherIndicators\\Basic-SAC\\Basic-SAC-460880.onnx",
+                "reward": null,
+                "creation_time": 1698320446.3774838,
+                "auxillary_file_paths": [
+                    "results\\Initial-HigherIndicators\\Basic-SAC\\Basic-SAC-460880.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 460880,
+            "file_path": "results\\Initial-HigherIndicators\\Basic-SAC.onnx",
+            "reward": null,
+            "creation_time": 1698320446.3774838,
+            "auxillary_file_paths": [
+                "results\\Initial-HigherIndicators\\Basic-SAC\\Basic-SAC-460880.pt"
+            ]
+        }
+    },
+    "Basic-PPO": {
+        "checkpoints": [
+            {
+                "steps": 457305,
+                "file_path": "results\\Initial-HigherIndicators\\Basic-PPO\\Basic-PPO-457305.onnx",
+                "reward": null,
+                "creation_time": 1698320446.4389405,
+                "auxillary_file_paths": [
+                    "results\\Initial-HigherIndicators\\Basic-PPO\\Basic-PPO-457305.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 457305,
+            "file_path": "results\\Initial-HigherIndicators\\Basic-PPO.onnx",
+            "reward": null,
+            "creation_time": 1698320446.4389405,
+            "auxillary_file_paths": [
+                "results\\Initial-HigherIndicators\\Basic-PPO\\Basic-PPO-457305.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}

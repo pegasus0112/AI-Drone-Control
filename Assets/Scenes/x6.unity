@@ -123,6 +123,103 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &350182458
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4024019001229936181, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: spawnables
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024019001229936181, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: placementTries
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024019001229936181, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: spawnableCount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024019001229936181, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: maxTrainingLength
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024019001229936181, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: hittableColorTransparecy
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578644632445998443, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: isGrounded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516042960864725730, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_Name
+      value: AI-Env (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: selfPlay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: rewardForFlying
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_BehaviorName
+      value: PPO-SYS-MIN
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -160
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
 --- !u!1001 &507245584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -163,9 +260,13 @@ PrefabInstance:
       propertyPath: selfPlay
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: rewardForFlying
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BehaviorName
-      value: SAC
+      value: PPO-SYS-MIN
       objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -256,9 +357,13 @@ PrefabInstance:
       propertyPath: selfPlay
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: rewardForFlying
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BehaviorName
-      value: SAC
+      value: PPO-SYS-MAX
       objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -349,9 +454,13 @@ PrefabInstance:
       propertyPath: selfPlay
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: rewardForFlying
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BehaviorName
-      value: SAC
+      value: PPO-SYS-MAX
       objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -536,9 +645,13 @@ PrefabInstance:
       propertyPath: selfPlay
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: rewardForFlying
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BehaviorName
-      value: PPO
+      value: PPO-SYS-MIN
       objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -674,13 +787,110 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.018842593, y: 0.94713235, z: -0.31524706, w: -0.05660996}
-  m_LocalPosition: {x: 52.76331, y: 72.53038, z: 64.94923}
+  m_LocalRotation: {x: -0.24095385, y: 0.655813, z: -0.23369086, w: -0.67619467}
+  m_LocalPosition: {x: 140.45709, y: 63.69741, z: -39.38604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1781842398
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4024019001229936181, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: spawnables
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024019001229936181, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: placementTries
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024019001229936181, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: spawnableCount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024019001229936181, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: maxTrainingLength
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024019001229936181, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: hittableColorTransparecy
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578644632445998443, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: isGrounded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516042960864725730, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_Name
+      value: AI-Env (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: selfPlay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: rewardForFlying
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_BehaviorName
+      value: PPO-SYS-MIN
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -160
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
 --- !u!1001 &2041212356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -721,9 +931,13 @@ PrefabInstance:
       propertyPath: selfPlay
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: rewardForFlying
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BehaviorName
-      value: PPO
+      value: PPO-SYS-MAX
       objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -814,9 +1028,13 @@ PrefabInstance:
       propertyPath: selfPlay
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: rewardForFlying
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BehaviorName
-      value: PPO
+      value: PPO-SYS-MAX
       objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -873,9 +1091,11 @@ SceneRoots:
   m_Roots:
   - {fileID: 963194228}
   - {fileID: 705507995}
-  - {fileID: 4115337356920061529}
   - {fileID: 2041212356}
-  - {fileID: 955291070}
   - {fileID: 603996527}
+  - {fileID: 4115337356920061529}
   - {fileID: 669041911}
+  - {fileID: 955291070}
   - {fileID: 507245584}
+  - {fileID: 350182458}
+  - {fileID: 1781842398}

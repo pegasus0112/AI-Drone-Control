@@ -1,0 +1,33 @@
+{
+    "PPO-SYS-MAX": {
+        "checkpoints": [
+            {
+                "steps": 999930,
+                "file_path": "results\\PPO-SYS-BATCH-fixed-2\\PPO-SYS-MAX\\PPO-SYS-MAX-999930.onnx",
+                "reward": -12.366843439369488,
+                "creation_time": 1700404303.9554608,
+                "auxillary_file_paths": [
+                    "results\\PPO-SYS-BATCH-fixed-2\\PPO-SYS-MAX\\PPO-SYS-MAX-999930.pt"
+                ]
+            }
+        ]
+    },
+    "PPO-SYS-MIN": {
+        "checkpoints": [
+            {
+                "steps": 999923,
+                "file_path": "results\\PPO-SYS-BATCH-fixed-2\\PPO-SYS-MIN\\PPO-SYS-MIN-999923.onnx",
+                "reward": 3.259999716281891,
+                "creation_time": 1700404438.379247,
+                "auxillary_file_paths": [
+                    "results\\PPO-SYS-BATCH-fixed-2\\PPO-SYS-MIN\\PPO-SYS-MIN-999923.pt"
+                ]
+            }
+        ]
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}

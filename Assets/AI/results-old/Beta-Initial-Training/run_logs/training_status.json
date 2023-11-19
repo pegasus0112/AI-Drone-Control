@@ -1,0 +1,123 @@
+{
+    "SAC": {
+        "checkpoints": [
+            {
+                "steps": 8499949,
+                "file_path": "results\\Beta-Initial-Training\\SAC\\SAC-8499949.onnx",
+                "reward": null,
+                "creation_time": 1700006890.381785,
+                "auxillary_file_paths": [
+                    "results\\Beta-Initial-Training\\SAC\\SAC-8499949.pt"
+                ]
+            },
+            {
+                "steps": 8999940,
+                "file_path": "results\\Beta-Initial-Training\\SAC\\SAC-8999940.onnx",
+                "reward": null,
+                "creation_time": 1700013220.8994968,
+                "auxillary_file_paths": [
+                    "results\\Beta-Initial-Training\\SAC\\SAC-8999940.pt"
+                ]
+            },
+            {
+                "steps": 9499997,
+                "file_path": "results\\Beta-Initial-Training\\SAC\\SAC-9499997.onnx",
+                "reward": null,
+                "creation_time": 1700019585.2879224,
+                "auxillary_file_paths": [
+                    "results\\Beta-Initial-Training\\SAC\\SAC-9499997.pt"
+                ]
+            },
+            {
+                "steps": 9999998,
+                "file_path": "results\\Beta-Initial-Training\\SAC\\SAC-9999998.onnx",
+                "reward": null,
+                "creation_time": 1700025956.6823792,
+                "auxillary_file_paths": [
+                    "results\\Beta-Initial-Training\\SAC\\SAC-9999998.pt"
+                ]
+            },
+            {
+                "steps": 10052189,
+                "file_path": "results\\Beta-Initial-Training\\SAC\\SAC-10052189.onnx",
+                "reward": 12.895582971005858,
+                "creation_time": 1700026513.375758,
+                "auxillary_file_paths": [
+                    "results\\Beta-Initial-Training\\SAC\\SAC-10052189.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 10052189,
+            "file_path": "results\\Beta-Initial-Training\\SAC.onnx",
+            "reward": 12.895582971005858,
+            "creation_time": 1700026513.375758,
+            "auxillary_file_paths": [
+                "results\\Beta-Initial-Training\\SAC\\SAC-10052189.pt"
+            ]
+        }
+    },
+    "PPO": {
+        "checkpoints": [
+            {
+                "steps": 8499987,
+                "file_path": "results\\Beta-Initial-Training\\PPO\\PPO-8499987.onnx",
+                "reward": 3.0346337619987205,
+                "creation_time": 1700007439.9942756,
+                "auxillary_file_paths": [
+                    "results\\Beta-Initial-Training\\PPO\\PPO-8499987.pt"
+                ]
+            },
+            {
+                "steps": 8999959,
+                "file_path": "results\\Beta-Initial-Training\\PPO\\PPO-8999959.onnx",
+                "reward": 2.872413438455812,
+                "creation_time": 1700013820.6794698,
+                "auxillary_file_paths": [
+                    "results\\Beta-Initial-Training\\PPO\\PPO-8999959.pt"
+                ]
+            },
+            {
+                "steps": 9499955,
+                "file_path": "results\\Beta-Initial-Training\\PPO\\PPO-9499955.onnx",
+                "reward": 3.958213803358376,
+                "creation_time": 1700020262.5525587,
+                "auxillary_file_paths": [
+                    "results\\Beta-Initial-Training\\PPO\\PPO-9499955.pt"
+                ]
+            },
+            {
+                "steps": 9999970,
+                "file_path": "results\\Beta-Initial-Training\\PPO\\PPO-9999970.onnx",
+                "reward": 4.198181320320476,
+                "creation_time": 1700026513.2225509,
+                "auxillary_file_paths": [
+                    "results\\Beta-Initial-Training\\PPO\\PPO-9999970.pt"
+                ]
+            },
+            {
+                "steps": 10000034,
+                "file_path": "results\\Beta-Initial-Training\\PPO\\PPO-10000034.onnx",
+                "reward": 4.198181320320476,
+                "creation_time": 1700026513.4887743,
+                "auxillary_file_paths": [
+                    "results\\Beta-Initial-Training\\PPO\\PPO-10000034.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 10000034,
+            "file_path": "results\\Beta-Initial-Training\\PPO.onnx",
+            "reward": 4.198181320320476,
+            "creation_time": 1700026513.4887743,
+            "auxillary_file_paths": [
+                "results\\Beta-Initial-Training\\PPO\\PPO-10000034.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}

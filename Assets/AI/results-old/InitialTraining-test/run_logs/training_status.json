@@ -1,0 +1,51 @@
+{
+    "Basic-PPO": {
+        "checkpoints": [
+            {
+                "steps": 4828,
+                "file_path": "results\\InitialTraining-test\\Basic-PPO\\Basic-PPO-4828.onnx",
+                "reward": -0.12086956251574599,
+                "creation_time": 1698314580.5732527,
+                "auxillary_file_paths": [
+                    "results\\InitialTraining-test\\Basic-PPO\\Basic-PPO-4828.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4828,
+            "file_path": "results\\InitialTraining-test\\Basic-PPO.onnx",
+            "reward": -0.12086956251574599,
+            "creation_time": 1698314580.5732527,
+            "auxillary_file_paths": [
+                "results\\InitialTraining-test\\Basic-PPO\\Basic-PPO-4828.pt"
+            ]
+        }
+    },
+    "Basic-SAC": {
+        "checkpoints": [
+            {
+                "steps": 5364,
+                "file_path": "results\\InitialTraining-test\\Basic-SAC\\Basic-SAC-5364.onnx",
+                "reward": null,
+                "creation_time": 1698314580.737901,
+                "auxillary_file_paths": [
+                    "results\\InitialTraining-test\\Basic-SAC\\Basic-SAC-5364.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 5364,
+            "file_path": "results\\InitialTraining-test\\Basic-SAC.onnx",
+            "reward": null,
+            "creation_time": 1698314580.737901,
+            "auxillary_file_paths": [
+                "results\\InitialTraining-test\\Basic-SAC\\Basic-SAC-5364.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}
