@@ -1,0 +1,162 @@
+
+gridSearch-fixed-0
+- PPO
+  - batch_size: 512
+  - buffer_size: 2560
+  - time_horizon: 32
+
+gridSearch-fixed-1
+- PPO
+  - batch_size: 512
+  - buffer_size: 2560
+  - time_horizon: 1040
+
+gridSearch-fixed-2
+- PPO
+  - batch_size: 512
+  - buffer_size: 2560
+  - time_horizon: 2048
+
+gridSearch-fixed-3
+- PPO
+  - batch_size: 512
+  - buffer_size: 26880
+  - time_horizon: 32
+
+gridSearch-fixed-4
+- PPO
+  - batch_size: 512
+  - buffer_size: 26880
+  - time_horizon: 1040
+
+gridSearch-fixed-5
+- PPO
+  - batch_size: 512
+  - buffer_size: 26880
+  - time_horizon: 2048
+
+gridSearch-fixed-6
+- PPO
+  - batch_size: 512
+  - buffer_size: 51200
+  - time_horizon: 32
+
+gridSearch-fixed-7
+- PPO
+  - batch_size: 512
+  - buffer_size: 51200
+  - time_horizon: 1040
+
+gridSearch-fixed-8
+- PPO
+  - batch_size: 512
+  - buffer_size: 51200
+  - time_horizon: 2048
+
+gridSearch-fixed-9
+- PPO
+  - batch_size: 2816
+  - buffer_size: 2560
+  - time_horizon: 32
+
+gridSearch-fixed-10
+- PPO
+  - batch_size: 2816
+  - buffer_size: 2560
+  - time_horizon: 1040
+
+gridSearch-fixed-11
+- PPO
+  - batch_size: 2816
+  - buffer_size: 2560
+  - time_horizon: 2048
+
+gridSearch-fixed-12
+- PPO
+  - batch_size: 2816
+  - buffer_size: 26880
+  - time_horizon: 32
+
+gridSearch-fixed-13
+- PPO
+  - batch_size: 2816
+  - buffer_size: 26880
+  - time_horizon: 1040
+
+gridSearch-fixed-14
+- PPO
+  - batch_size: 2816
+  - buffer_size: 26880
+  - time_horizon: 2048
+
+gridSearch-fixed-15
+- PPO
+  - batch_size: 2816
+  - buffer_size: 51200
+  - time_horizon: 32
+
+gridSearch-fixed-16
+- PPO
+  - batch_size: 2816
+  - buffer_size: 51200
+  - time_horizon: 1040
+
+gridSearch-fixed-17
+- PPO
+  - batch_size: 2816
+  - buffer_size: 51200
+  - time_horizon: 2048
+
+gridSearch-fixed-18
+- PPO
+  - batch_size: 5120
+  - buffer_size: 2560
+  - time_horizon: 32
+
+gridSearch-fixed-19
+- PPO
+  - batch_size: 5120
+  - buffer_size: 2560
+  - time_horizon: 1040
+
+gridSearch-fixed-20
+- PPO
+  - batch_size: 5120
+  - buffer_size: 2560
+  - time_horizon: 2048
+
+gridSearch-fixed-21
+- PPO
+  - batch_size: 5120
+  - buffer_size: 26880
+  - time_horizon: 32
+
+gridSearch-fixed-22
+- PPO
+  - batch_size: 5120
+  - buffer_size: 26880
+  - time_horizon: 1040
+
+gridSearch-fixed-23
+- PPO
+  - batch_size: 5120
+  - buffer_size: 26880
+  - time_horizon: 2048
+
+gridSearch-fixed-24
+- PPO
+  - batch_size: 5120
+  - buffer_size: 51200
+  - time_horizon: 32
+
+gridSearch-fixed-25
+- PPO
+  - batch_size: 5120
+  - buffer_size: 51200
+  - time_horizon: 1040
+
+gridSearch-fixed-26
+- PPO
+  - batch_size: 5120
+  - buffer_size: 51200
+  - time_horizon: 2048
