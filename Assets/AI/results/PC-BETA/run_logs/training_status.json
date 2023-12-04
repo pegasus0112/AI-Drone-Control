@@ -1,0 +1,105 @@
+{
+    "PPO-SYS-MAX": {
+        "checkpoints": [
+            {
+                "steps": 999915,
+                "file_path": "results\\PC-BETA\\PPO-SYS-MAX\\PPO-SYS-MAX-999915.onnx",
+                "reward": 7.0866663207610445,
+                "creation_time": 1700518477.1867676,
+                "auxillary_file_paths": [
+                    "results\\PC-BETA\\PPO-SYS-MAX\\PPO-SYS-MAX-999915.pt"
+                ]
+            },
+            {
+                "steps": 1999924,
+                "file_path": "results\\PC-BETA\\PPO-SYS-MAX\\PPO-SYS-MAX-1999924.onnx",
+                "reward": 7.399999648332596,
+                "creation_time": 1700533265.0628388,
+                "auxillary_file_paths": [
+                    "results\\PC-BETA\\PPO-SYS-MAX\\PPO-SYS-MAX-1999924.pt"
+                ]
+            },
+            {
+                "steps": 2999940,
+                "file_path": "results\\PC-BETA\\PPO-SYS-MAX\\PPO-SYS-MAX-2999940.onnx",
+                "reward": 6.441176129395471,
+                "creation_time": 1700548088.7513273,
+                "auxillary_file_paths": [
+                    "results\\PC-BETA\\PPO-SYS-MAX\\PPO-SYS-MAX-2999940.pt"
+                ]
+            },
+            {
+                "steps": 3744787,
+                "file_path": "results\\PC-BETA\\PPO-SYS-MAX\\PPO-SYS-MAX-3744787.onnx",
+                "reward": 7.906666133138868,
+                "creation_time": 1700559974.457938,
+                "auxillary_file_paths": [
+                    "results\\PC-BETA\\PPO-SYS-MAX\\PPO-SYS-MAX-3744787.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3744787,
+            "file_path": "results\\PC-BETA\\PPO-SYS-MAX.onnx",
+            "reward": 7.906666133138868,
+            "creation_time": 1700559974.457938,
+            "auxillary_file_paths": [
+                "results\\PC-BETA\\PPO-SYS-MAX\\PPO-SYS-MAX-3744787.pt"
+            ]
+        }
+    },
+    "PPO-SYS-MIN": {
+        "checkpoints": [
+            {
+                "steps": 999893,
+                "file_path": "results\\PC-BETA\\PPO-SYS-MIN\\PPO-SYS-MIN-999893.onnx",
+                "reward": 5.225454211235046,
+                "creation_time": 1700518514.6258867,
+                "auxillary_file_paths": [
+                    "results\\PC-BETA\\PPO-SYS-MIN\\PPO-SYS-MIN-999893.pt"
+                ]
+            },
+            {
+                "steps": 1999987,
+                "file_path": "results\\PC-BETA\\PPO-SYS-MIN\\PPO-SYS-MIN-1999987.onnx",
+                "reward": 6.77538428742152,
+                "creation_time": 1700533327.15802,
+                "auxillary_file_paths": [
+                    "results\\PC-BETA\\PPO-SYS-MIN\\PPO-SYS-MIN-1999987.pt"
+                ]
+            },
+            {
+                "steps": 2999879,
+                "file_path": "results\\PC-BETA\\PPO-SYS-MIN\\PPO-SYS-MIN-2999879.onnx",
+                "reward": 6.224999368190765,
+                "creation_time": 1700548161.3313189,
+                "auxillary_file_paths": [
+                    "results\\PC-BETA\\PPO-SYS-MIN\\PPO-SYS-MIN-2999879.pt"
+                ]
+            },
+            {
+                "steps": 3732689,
+                "file_path": "results\\PC-BETA\\PPO-SYS-MIN\\PPO-SYS-MIN-3732689.onnx",
+                "reward": 5.159999588673765,
+                "creation_time": 1700559974.3313453,
+                "auxillary_file_paths": [
+                    "results\\PC-BETA\\PPO-SYS-MIN\\PPO-SYS-MIN-3732689.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3732689,
+            "file_path": "results\\PC-BETA\\PPO-SYS-MIN.onnx",
+            "reward": 5.159999588673765,
+            "creation_time": 1700559974.3313453,
+            "auxillary_file_paths": [
+                "results\\PC-BETA\\PPO-SYS-MIN\\PPO-SYS-MIN-3732689.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}
