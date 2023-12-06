@@ -1,0 +1,65 @@
+{
+    "PPO": {
+        "checkpoints": [
+            {
+                "steps": 1999780,
+                "file_path": "results\\GridSearchTWO-5Mio-9\\PPO\\PPO-1999780.onnx",
+                "reward": 7.301999473571778,
+                "creation_time": 1700935653.5501397,
+                "auxillary_file_paths": [
+                    "results\\GridSearchTWO-5Mio-9\\PPO\\PPO-1999780.pt"
+                ]
+            },
+            {
+                "steps": 2999871,
+                "file_path": "results\\GridSearchTWO-5Mio-9\\PPO\\PPO-2999871.onnx",
+                "reward": 11.489999189972878,
+                "creation_time": 1700943336.383067,
+                "auxillary_file_paths": [
+                    "results\\GridSearchTWO-5Mio-9\\PPO\\PPO-2999871.pt"
+                ]
+            },
+            {
+                "steps": 3999897,
+                "file_path": "results\\GridSearchTWO-5Mio-9\\PPO\\PPO-3999897.onnx",
+                "reward": 11.029999335606893,
+                "creation_time": 1700950963.2733781,
+                "auxillary_file_paths": [
+                    "results\\GridSearchTWO-5Mio-9\\PPO\\PPO-3999897.pt"
+                ]
+            },
+            {
+                "steps": 4999839,
+                "file_path": "results\\GridSearchTWO-5Mio-9\\PPO\\PPO-4999839.onnx",
+                "reward": 12.62999963760376,
+                "creation_time": 1700958516.3444104,
+                "auxillary_file_paths": [
+                    "results\\GridSearchTWO-5Mio-9\\PPO\\PPO-4999839.pt"
+                ]
+            },
+            {
+                "steps": 5000027,
+                "file_path": "results\\GridSearchTWO-5Mio-9\\PPO\\PPO-5000027.onnx",
+                "reward": 12.03999932607015,
+                "creation_time": 1700958516.449448,
+                "auxillary_file_paths": [
+                    "results\\GridSearchTWO-5Mio-9\\PPO\\PPO-5000027.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 5000027,
+            "file_path": "results\\GridSearchTWO-5Mio-9\\PPO.onnx",
+            "reward": 12.03999932607015,
+            "creation_time": 1700958516.449448,
+            "auxillary_file_paths": [
+                "results\\GridSearchTWO-5Mio-9\\PPO\\PPO-5000027.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}

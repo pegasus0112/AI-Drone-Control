@@ -1,0 +1,65 @@
+{
+    "PPO": {
+        "checkpoints": [
+            {
+                "steps": 6999925,
+                "file_path": "results\\GS2-11-LR-Test\\PPO\\PPO-6999925.onnx",
+                "reward": 12.044999388357004,
+                "creation_time": 1701234474.3319337,
+                "auxillary_file_paths": [
+                    "results\\GS2-11-LR-Test\\PPO\\PPO-6999925.pt"
+                ]
+            },
+            {
+                "steps": 7999882,
+                "file_path": "results\\GS2-11-LR-Test\\PPO\\PPO-7999882.onnx",
+                "reward": 14.639999389648438,
+                "creation_time": 1701242889.9355686,
+                "auxillary_file_paths": [
+                    "results\\GS2-11-LR-Test\\PPO\\PPO-7999882.pt"
+                ]
+            },
+            {
+                "steps": 8999917,
+                "file_path": "results\\GS2-11-LR-Test\\PPO\\PPO-8999917.onnx",
+                "reward": null,
+                "creation_time": 1701251880.090635,
+                "auxillary_file_paths": [
+                    "results\\GS2-11-LR-Test\\PPO\\PPO-8999917.pt"
+                ]
+            },
+            {
+                "steps": 9999892,
+                "file_path": "results\\GS2-11-LR-Test\\PPO\\PPO-9999892.onnx",
+                "reward": 10.089999437332153,
+                "creation_time": 1701260983.419955,
+                "auxillary_file_paths": [
+                    "results\\GS2-11-LR-Test\\PPO\\PPO-9999892.pt"
+                ]
+            },
+            {
+                "steps": 10000057,
+                "file_path": "results\\GS2-11-LR-Test\\PPO\\PPO-10000057.onnx",
+                "reward": 10.052307055546688,
+                "creation_time": 1701260983.5394554,
+                "auxillary_file_paths": [
+                    "results\\GS2-11-LR-Test\\PPO\\PPO-10000057.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 10000057,
+            "file_path": "results\\GS2-11-LR-Test\\PPO.onnx",
+            "reward": 10.052307055546688,
+            "creation_time": 1701260983.5394554,
+            "auxillary_file_paths": [
+                "results\\GS2-11-LR-Test\\PPO\\PPO-10000057.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}
