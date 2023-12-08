@@ -1,0 +1,181 @@
+{
+    "PPO-BUFFER-Top2": {
+        "checkpoints": [
+            {
+                "steps": 999975,
+                "file_path": "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top2\\PPO-BUFFER-Top2-999975.onnx",
+                "reward": 7.4821679625346835,
+                "creation_time": 1701908429.7285514,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top2\\PPO-BUFFER-Top2-999975.pt"
+                ]
+            },
+            {
+                "steps": 1999973,
+                "file_path": "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top2\\PPO-BUFFER-Top2-1999973.onnx",
+                "reward": 11.403542071732097,
+                "creation_time": 1701945409.9011,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top2\\PPO-BUFFER-Top2-1999973.pt"
+                ]
+            },
+            {
+                "steps": 2999968,
+                "file_path": "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top2\\PPO-BUFFER-Top2-2999968.onnx",
+                "reward": 10.404726956265442,
+                "creation_time": 1701988768.0040383,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top2\\PPO-BUFFER-Top2-2999968.pt"
+                ]
+            },
+            {
+                "steps": 3999979,
+                "file_path": "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top2\\PPO-BUFFER-Top2-3999979.onnx",
+                "reward": 8.344615097133778,
+                "creation_time": 1702030828.916335,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top2\\PPO-BUFFER-Top2-3999979.pt"
+                ]
+            },
+            {
+                "steps": 4087625,
+                "file_path": "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top2\\PPO-BUFFER-Top2-4087625.onnx",
+                "reward": 8.275046445423522,
+                "creation_time": 1702034319.352421,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top2\\PPO-BUFFER-Top2-4087625.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4087625,
+            "file_path": "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top2.onnx",
+            "reward": 8.275046445423522,
+            "creation_time": 1702034319.352421,
+            "auxillary_file_paths": [
+                "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top2\\PPO-BUFFER-Top2-4087625.pt"
+            ]
+        }
+    },
+    "PPO-BUFFER-Top1": {
+        "checkpoints": [
+            {
+                "steps": 999993,
+                "file_path": "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top1\\PPO-BUFFER-Top1-999993.onnx",
+                "reward": 8.06813229330626,
+                "creation_time": 1701908441.895436,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top1\\PPO-BUFFER-Top1-999993.pt"
+                ]
+            },
+            {
+                "steps": 1999958,
+                "file_path": "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top1\\PPO-BUFFER-Top1-1999958.onnx",
+                "reward": 9.227377990302916,
+                "creation_time": 1701945488.534231,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top1\\PPO-BUFFER-Top1-1999958.pt"
+                ]
+            },
+            {
+                "steps": 2999996,
+                "file_path": "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top1\\PPO-BUFFER-Top1-2999996.onnx",
+                "reward": 9.48662274534052,
+                "creation_time": 1701989309.797098,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top1\\PPO-BUFFER-Top1-2999996.pt"
+                ]
+            },
+            {
+                "steps": 3999960,
+                "file_path": "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top1\\PPO-BUFFER-Top1-3999960.onnx",
+                "reward": 10.159999211629232,
+                "creation_time": 1702031834.8573678,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top1\\PPO-BUFFER-Top1-3999960.pt"
+                ]
+            },
+            {
+                "steps": 4070685,
+                "file_path": "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top1\\PPO-BUFFER-Top1-4070685.onnx",
+                "reward": 8.774199852302893,
+                "creation_time": 1702034319.9252968,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top1\\PPO-BUFFER-Top1-4070685.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4070685,
+            "file_path": "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top1.onnx",
+            "reward": 8.774199852302893,
+            "creation_time": 1702034319.9252968,
+            "auxillary_file_paths": [
+                "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top1\\PPO-BUFFER-Top1-4070685.pt"
+            ]
+        }
+    },
+    "PPO-BUFFER-Top3": {
+        "checkpoints": [
+            {
+                "steps": 999995,
+                "file_path": "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top3\\PPO-BUFFER-Top3-999995.onnx",
+                "reward": 7.55481155341337,
+                "creation_time": 1701908523.6628735,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top3\\PPO-BUFFER-Top3-999995.pt"
+                ]
+            },
+            {
+                "steps": 1999988,
+                "file_path": "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top3\\PPO-BUFFER-Top3-1999988.onnx",
+                "reward": 8.302415133945727,
+                "creation_time": 1701945808.0075116,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top3\\PPO-BUFFER-Top3-1999988.pt"
+                ]
+            },
+            {
+                "steps": 2999966,
+                "file_path": "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top3\\PPO-BUFFER-Top3-2999966.onnx",
+                "reward": 8.824067140029648,
+                "creation_time": 1701989618.5970602,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top3\\PPO-BUFFER-Top3-2999966.pt"
+                ]
+            },
+            {
+                "steps": 3999882,
+                "file_path": "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top3\\PPO-BUFFER-Top3-3999882.onnx",
+                "reward": 9.989999373753866,
+                "creation_time": 1702032571.7671368,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top3\\PPO-BUFFER-Top3-3999882.pt"
+                ]
+            },
+            {
+                "steps": 4062852,
+                "file_path": "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top3\\PPO-BUFFER-Top3-4062852.onnx",
+                "reward": 9.97764643054595,
+                "creation_time": 1702034319.641064,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top3\\PPO-BUFFER-Top3-4062852.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4062852,
+            "file_path": "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top3.onnx",
+            "reward": 9.97764643054595,
+            "creation_time": 1702034319.641064,
+            "auxillary_file_paths": [
+                "results\\GS1-Double-Buffer-No-Scale-new-windows-update\\PPO-BUFFER-Top3\\PPO-BUFFER-Top3-4062852.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}
