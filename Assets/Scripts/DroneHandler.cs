@@ -71,15 +71,22 @@ public class DroneHandler : MonoBehaviour
     }
     private void ResetDroneIfTooLongOnGround()
     {
-        float currentTime = Time.time;
-        if (isGrounded && lastGroundTime == -1)
+        if(isGrounded)
         {
-            lastGroundTime = Time.time;
-        }
-        else if (currentTime - lastGroundTime > maxGroundTime)
+            float currentTime = Time.time;
+            if (isGrounded && lastGroundTime == -1)
+            {
+                lastGroundTime = Time.time;
+            }
+            else if (isGrounded && currentTime - lastGroundTime > maxGroundTime)
+            {
+                droneAI.EndEpisodeBecauseTooLongGrounded();
+            }
+        } else
         {
-            droneAI.EndEpisodeBecauseTooLongGrounded();
+            lastGroundTime = -1;
         }
+
     }
 
     //Walls & Ground
