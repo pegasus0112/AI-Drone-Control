@@ -20,10 +20,11 @@ public class DroneAI : Agent
 
     [Space(10)]
     [Header("Reward / Pentalies")]
-    public float rewardForFlying = 1;
+    public float rewardForFlying = 8;
 
     [Space(5)]
-    public float penalyForCrashing = -10;
+    public float penalyForCrashing = -13;
+    public float penaltyForTooLongGrounded = -20;
 
 
     [Space(10)]
@@ -65,7 +66,7 @@ public class DroneAI : Agent
         else
         {
             //GAME OVER
-            //AddReward(penalyForCrashing);
+            AddReward(penalyForCrashing);
             environmentManager.EndTraining();
         }
 
@@ -81,7 +82,6 @@ public class DroneAI : Agent
         {
             AddReward(rewardForFlying * Time.deltaTime);
         }
-        //penalty for IsGrounded+
     }
 
 
@@ -112,5 +112,12 @@ public class DroneAI : Agent
     {
         Debug.Log("Drone scored " + points);
         AddReward(points);
+    }
+
+    public void EndEpisodeBecauseTooLongGrounded()
+    {
+        Debug.Log("Resetting training because of ground time");
+        AddReward(penaltyForTooLongGrounded);
+        environmentManager.EndTraining();
     }
 }

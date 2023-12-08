@@ -1,0 +1,127 @@
+{
+    "PPO-BUFFER-Top2": {
+        "checkpoints": [
+            {
+                "steps": 999982,
+                "file_path": "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top2\\PPO-BUFFER-Top2-999982.onnx",
+                "reward": 0.435293909004019,
+                "creation_time": 1701927818.2667406,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top2\\PPO-BUFFER-Top2-999982.pt"
+                ]
+            },
+            {
+                "steps": 1999997,
+                "file_path": "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top2\\PPO-BUFFER-Top2-1999997.onnx",
+                "reward": 4.679433622731353,
+                "creation_time": 1701989623.5411704,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top2\\PPO-BUFFER-Top2-1999997.pt"
+                ]
+            },
+            {
+                "steps": 2662760,
+                "file_path": "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top2\\PPO-BUFFER-Top2-2662760.onnx",
+                "reward": null,
+                "creation_time": 1702033873.7551134,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top2\\PPO-BUFFER-Top2-2662760.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2662760,
+            "file_path": "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top2.onnx",
+            "reward": null,
+            "creation_time": 1702033873.7551134,
+            "auxillary_file_paths": [
+                "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top2\\PPO-BUFFER-Top2-2662760.pt"
+            ]
+        }
+    },
+    "PPO-BUFFER-Top3": {
+        "checkpoints": [
+            {
+                "steps": 999874,
+                "file_path": "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top3\\PPO-BUFFER-Top3-999874.onnx",
+                "reward": 1.5519557001113455,
+                "creation_time": 1701927841.9340153,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top3\\PPO-BUFFER-Top3-999874.pt"
+                ]
+            },
+            {
+                "steps": 1999978,
+                "file_path": "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top3\\PPO-BUFFER-Top3-1999978.onnx",
+                "reward": 7.023152822775465,
+                "creation_time": 1701989251.5048287,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top3\\PPO-BUFFER-Top3-1999978.pt"
+                ]
+            },
+            {
+                "steps": 2679847,
+                "file_path": "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top3\\PPO-BUFFER-Top3-2679847.onnx",
+                "reward": 10.79404159302407,
+                "creation_time": 1702033875.6710064,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top3\\PPO-BUFFER-Top3-2679847.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2679847,
+            "file_path": "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top3.onnx",
+            "reward": 10.79404159302407,
+            "creation_time": 1702033875.6710064,
+            "auxillary_file_paths": [
+                "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top3\\PPO-BUFFER-Top3-2679847.pt"
+            ]
+        }
+    },
+    "PPO-BUFFER-Top1": {
+        "checkpoints": [
+            {
+                "steps": 999996,
+                "file_path": "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top1\\PPO-BUFFER-Top1-999996.onnx",
+                "reward": 0.4951492232131207,
+                "creation_time": 1701927992.896394,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top1\\PPO-BUFFER-Top1-999996.pt"
+                ]
+            },
+            {
+                "steps": 1999932,
+                "file_path": "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top1\\PPO-BUFFER-Top1-1999932.onnx",
+                "reward": 4.685531305083146,
+                "creation_time": 1701989729.3119304,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top1\\PPO-BUFFER-Top1-1999932.pt"
+                ]
+            },
+            {
+                "steps": 2658006,
+                "file_path": "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top1\\PPO-BUFFER-Top1-2658006.onnx",
+                "reward": 5.51202339113117,
+                "creation_time": 1702033877.4358099,
+                "auxillary_file_paths": [
+                    "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top1\\PPO-BUFFER-Top1-2658006.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2658006,
+            "file_path": "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top1.onnx",
+            "reward": 5.51202339113117,
+            "creation_time": 1702033877.4358099,
+            "auxillary_file_paths": [
+                "results\\GS1-Double-Buffer-WITH_CRASH_PENALTY\\PPO-BUFFER-Top1\\PPO-BUFFER-Top1-2658006.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}

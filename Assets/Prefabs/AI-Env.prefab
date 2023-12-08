@@ -150,9 +150,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inTraining: 0
   environmentSize: 5
-  spawnableCount: 25
-  placementTries: 500
-  hittableColorTransparecy: 0.5
+  spawnableCount: 20
+  placementTries: 200
+  hittableColorTransparecy: 0.8
+  maxTrainingLength: 120
   drone: {fileID: 1576150728221555994}
   droneSpawnPoint: {fileID: 2666822791238992774}
   spawnables: 0
@@ -2238,9 +2239,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2949905505468083478, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
+      propertyPath: selfPlay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2949905505468083478, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
+      propertyPath: rewardForFlying
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2949905505468083478, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
+      propertyPath: penalyForCrashing
+      value: -13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2949905505468083478, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
       propertyPath: environmentManager
       value: 
       objectReference: {fileID: 4024019001229936181}
+    - target: {fileID: 2994709532466879502, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
+      propertyPath: m_BehaviorName
+      value: PPO-BUFFER-Top1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2994709532466879502, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5043874156345446804, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
+      propertyPath: isGrounded
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8046368367370664421, guid: 34df71cfa1a8e28479fb4999b38176fa, type: 3}
       propertyPath: m_Name
       value: Drone
