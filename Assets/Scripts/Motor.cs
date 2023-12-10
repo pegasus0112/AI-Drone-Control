@@ -17,7 +17,7 @@ public class Motor : MonoBehaviour
     public float maxRPM = 3500;
     public GameObject rotor;
 
-    [Range(1, 10)] public float forceMultiplier = 1;
+    [Range(1, 25)] public float forceMultiplier = 1;
 
     [Space(10)]
     [Header("GroundCheck")]
