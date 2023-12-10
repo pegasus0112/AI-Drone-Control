@@ -1,0 +1,136 @@
+{
+    "SAC": {
+        "checkpoints": [
+            {
+                "steps": 499980,
+                "file_path": "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC\\SAC-499980.onnx",
+                "reward": null,
+                "creation_time": 1702081583.6355703,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC\\SAC-499980.pt"
+                ]
+            },
+            {
+                "steps": 999976,
+                "file_path": "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC\\SAC-999976.onnx",
+                "reward": null,
+                "creation_time": 1702144486.725908,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC\\SAC-999976.pt"
+                ]
+            },
+            {
+                "steps": 1499939,
+                "file_path": "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC\\SAC-1499939.onnx",
+                "reward": null,
+                "creation_time": 1702207422.5691264,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC\\SAC-1499939.pt"
+                ]
+            },
+            {
+                "steps": 1521821,
+                "file_path": "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC\\SAC-1521821.onnx",
+                "reward": null,
+                "creation_time": 1702209322.8219745,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC\\SAC-1521821.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1521821,
+            "file_path": "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC.onnx",
+            "reward": null,
+            "creation_time": 1702209322.8219745,
+            "auxillary_file_paths": [
+                "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC\\SAC-1521821.pt"
+            ]
+        }
+    },
+    "SAC-Test": {
+        "checkpoints": [
+            {
+                "steps": 499988,
+                "file_path": "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC-Test\\SAC-Test-499988.onnx",
+                "reward": 56.75999164581299,
+                "creation_time": 1702081967.1830943,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC-Test\\SAC-Test-499988.pt"
+                ]
+            },
+            {
+                "steps": 999937,
+                "file_path": "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC-Test\\SAC-Test-999937.onnx",
+                "reward": 37.07999515533447,
+                "creation_time": 1702145473.145323,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC-Test\\SAC-Test-999937.pt"
+                ]
+            },
+            {
+                "steps": 1499943,
+                "file_path": "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC-Test\\SAC-Test-1499943.onnx",
+                "reward": null,
+                "creation_time": 1702208165.7577558,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC-Test\\SAC-Test-1499943.pt"
+                ]
+            },
+            {
+                "steps": 1513217,
+                "file_path": "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC-Test\\SAC-Test-1513217.onnx",
+                "reward": null,
+                "creation_time": 1702209325.732903,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC-Test\\SAC-Test-1513217.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1513217,
+            "file_path": "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC-Test.onnx",
+            "reward": null,
+            "creation_time": 1702209325.732903,
+            "auxillary_file_paths": [
+                "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\SAC-Test\\SAC-Test-1513217.pt"
+            ]
+        }
+    },
+    "PPO": {
+        "checkpoints": [
+            {
+                "steps": 999859,
+                "file_path": "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\PPO\\PPO-999859.onnx",
+                "reward": 17.444778820904702,
+                "creation_time": 1702146734.4822025,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\PPO\\PPO-999859.pt"
+                ]
+            },
+            {
+                "steps": 1479505,
+                "file_path": "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\PPO\\PPO-1479505.onnx",
+                "reward": 26.651607951810284,
+                "creation_time": 1702209324.0217845,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\PPO\\PPO-1479505.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1479505,
+            "file_path": "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\PPO.onnx",
+            "reward": 26.651607951810284,
+            "creation_time": 1702209324.0217845,
+            "auxillary_file_paths": [
+                "results\\Gamma-INIT-LEVEL-2-HIGH_BLOCK_REWARD\\PPO\\PPO-1479505.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}
