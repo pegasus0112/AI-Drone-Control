@@ -120,11 +120,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cleared: 0
-  pointsForClearing: 5
+  pointsForClearing: 12
   type: 0
   maxGateClearTime: 4
   minDistanceToOtherObjects: 3
-  hittableMaterialTransparency: 1
+  hittableMaterialTransparency: 0.75
   sphereCollider: {fileID: 6500507963507093883}
   hittablepart: {fileID: 3303939040269964123}
 --- !u!135 &6500507963507093883
