@@ -1,0 +1,65 @@
+{
+    "SAC": {
+        "checkpoints": [
+            {
+                "steps": 6499995,
+                "file_path": "results\\Gamma-INIT-SINGLE-SAC\\SAC\\SAC-6499995.onnx",
+                "reward": 57.816003227233885,
+                "creation_time": 1702348932.4666593,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-SINGLE-SAC\\SAC\\SAC-6499995.pt"
+                ]
+            },
+            {
+                "steps": 6999957,
+                "file_path": "results\\Gamma-INIT-SINGLE-SAC\\SAC\\SAC-6999957.onnx",
+                "reward": 41.62000501155853,
+                "creation_time": 1702360419.0608492,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-SINGLE-SAC\\SAC\\SAC-6999957.pt"
+                ]
+            },
+            {
+                "steps": 7499939,
+                "file_path": "results\\Gamma-INIT-SINGLE-SAC\\SAC\\SAC-7499939.onnx",
+                "reward": 29.666671752929688,
+                "creation_time": 1702371828.4314706,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-SINGLE-SAC\\SAC\\SAC-7499939.pt"
+                ]
+            },
+            {
+                "steps": 7999983,
+                "file_path": "results\\Gamma-INIT-SINGLE-SAC\\SAC\\SAC-7999983.onnx",
+                "reward": null,
+                "creation_time": 1702383541.9810417,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-SINGLE-SAC\\SAC\\SAC-7999983.pt"
+                ]
+            },
+            {
+                "steps": 8039409,
+                "file_path": "results\\Gamma-INIT-SINGLE-SAC\\SAC\\SAC-8039409.onnx",
+                "reward": null,
+                "creation_time": 1702384488.6384633,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-SINGLE-SAC\\SAC\\SAC-8039409.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 8039409,
+            "file_path": "results\\Gamma-INIT-SINGLE-SAC\\SAC.onnx",
+            "reward": null,
+            "creation_time": 1702384488.6384633,
+            "auxillary_file_paths": [
+                "results\\Gamma-INIT-SINGLE-SAC\\SAC\\SAC-8039409.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}
