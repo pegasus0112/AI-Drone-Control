@@ -112,7 +112,8 @@ public class DroneAI : Agent
 
     public void Scored(float points)
     {
-        Debug.Log("Drone scored " + points);
+        //Debug.Log("Drone scored " + points);
+        Debug.Log("Drone scored ");
         clearedObjectCount++;
         AddReward(points);
     }

@@ -32,6 +32,8 @@ public class DroneHandler : MonoBehaviour
     [Range(1, 10)] public float maxGroundTime = 4;
     private float lastGroundTime;
 
+    private int lastHitObjectHash = -1;
+
     //important for resetting state after restarting training
     private void OnEnable()
     {
@@ -141,9 +143,17 @@ public class DroneHandler : MonoBehaviour
 
             if (spawnedObject.cleared)
             {
-                droneAI.Scored(spawnedObject.pointsForClearing);
-                Destroy(hittedSpawnable);
+                if(lastHitObjectHash != spawnedObject.GetHashCode())
+                {
+                    lastHitObjectHash = spawnedObject.GetHashCode();
+                    droneAI.Scored(spawnedObject.pointsForClearing);
+                    Destroy(hittedSpawnable);
+                } else
+                {
+                    Debug.Log("object already cleared");
+                }
             }
+
         }
     }
 }
