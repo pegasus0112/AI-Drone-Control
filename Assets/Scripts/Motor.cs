@@ -56,7 +56,7 @@ public class Motor : MonoBehaviour
     private bool CheckGrounded()
     {
         Collider[] hitColliders = Physics.OverlapSphere(groundCheckPoint.position, toCheckGroundDistance);
-        return Array.Exists(hitColliders, coll => coll.tag == "Ground");
+        return Array.Exists(hitColliders, coll => coll.tag == "Ground" || coll.tag == "Wall");
     }
 
     private void OnDrawGizmos()

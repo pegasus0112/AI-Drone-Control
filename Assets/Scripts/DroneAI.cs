@@ -48,6 +48,12 @@ public class DroneAI : Agent
 
         // y height (relative heigth to ground)
         sensor.AddObservation(gameObject.transform.position.y - environmentManager.ground.position.y);
+
+        // current controls
+        sensor.AddObservation(droneControl.throttle);
+        sensor.AddObservation(droneControl.yaw);
+        sensor.AddObservation(droneControl.pitch);
+        sensor.AddObservation(droneControl.roll);
     }
 
     // Start is called before the first frame update
