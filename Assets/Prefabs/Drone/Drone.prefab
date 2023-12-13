@@ -570,8 +570,9 @@ MonoBehaviour:
   droneControl: {fileID: 1326000320420491401}
   droneRig: {fileID: 7963775248013033728}
   environmentManager: {fileID: 0}
-  rewardForFlying: 8
-  penalyForCrashing: -13
+  rewardForFlyingOverTime: 3
+  penalyForCrashing: -30
+  penaltyForGroundedOverTime: -10
   penaltyForTooLongGrounded: -20
   manualControl: {fileID: 3104508842387288139}
 --- !u!114 &3104508842387288139
@@ -683,7 +684,7 @@ MonoBehaviour:
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: SAC-TEST
+  m_BehaviorName: PPO
   TeamId: 0
   m_UseChildSensors: 1
   m_UseChildActuators: 1

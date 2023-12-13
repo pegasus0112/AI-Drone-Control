@@ -227,6 +227,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI-Env
       objectReference: {fileID: 0}
+    - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: rewardForFlying
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946377372552653289, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: penalyForCrashing
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: m_BehaviorName
+      value: PPO
+      objectReference: {fileID: 0}
     - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
