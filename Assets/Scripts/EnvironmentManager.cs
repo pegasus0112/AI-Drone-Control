@@ -191,6 +191,8 @@ public class EnvironmentManager : MonoBehaviour
     public void EndTraining()
     {
         inTraining = false;
+        Debug.Log("Clear count: " + drone.GetComponent<DroneAI>().clearedObjectCount);
+        drone.GetComponent<DroneAI>().clearedObjectCount = 0;
         drone.SetActive(false);
     }
 

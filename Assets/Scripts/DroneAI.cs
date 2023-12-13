@@ -8,6 +8,7 @@ public class DroneAI : Agent
 {
     [Header("Status")]
     public bool selfPlay = true;
+    public int clearedObjectCount = 0;
 
 
     [Space(10)]
@@ -31,7 +32,6 @@ public class DroneAI : Agent
     [Space(10)]
     [Header("Manual Control Setup")]
     public ManualControl manualControl;
-
 
     public override void CollectObservations(VectorSensor sensor)
     {
@@ -57,11 +57,6 @@ public class DroneAI : Agent
         sensor.AddObservation(droneControl.roll);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -118,6 +113,7 @@ public class DroneAI : Agent
     public void Scored(float points)
     {
         Debug.Log("Drone scored " + points);
+        clearedObjectCount++;
         AddReward(points);
     }
 
