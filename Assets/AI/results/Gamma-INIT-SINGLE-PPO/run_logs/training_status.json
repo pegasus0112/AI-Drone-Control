@@ -1,0 +1,65 @@
+{
+    "PPO": {
+        "checkpoints": [
+            {
+                "steps": 4999970,
+                "file_path": "results\\Gamma-INIT-SINGLE-PPO\\PPO\\PPO-4999970.onnx",
+                "reward": 28.30025488039769,
+                "creation_time": 1702414721.1347778,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-SINGLE-PPO\\PPO\\PPO-4999970.pt"
+                ]
+            },
+            {
+                "steps": 5999880,
+                "file_path": "results\\Gamma-INIT-SINGLE-PPO\\PPO\\PPO-5999880.onnx",
+                "reward": 30.808684283862483,
+                "creation_time": 1702421043.55343,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-SINGLE-PPO\\PPO\\PPO-5999880.pt"
+                ]
+            },
+            {
+                "steps": 6999826,
+                "file_path": "results\\Gamma-INIT-SINGLE-PPO\\PPO\\PPO-6999826.onnx",
+                "reward": 33.013132140411074,
+                "creation_time": 1702427471.404198,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-SINGLE-PPO\\PPO\\PPO-6999826.pt"
+                ]
+            },
+            {
+                "steps": 7999952,
+                "file_path": "results\\Gamma-INIT-SINGLE-PPO\\PPO\\PPO-7999952.onnx",
+                "reward": 29.044875237999893,
+                "creation_time": 1702433420.0109365,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-SINGLE-PPO\\PPO\\PPO-7999952.pt"
+                ]
+            },
+            {
+                "steps": 8000114,
+                "file_path": "results\\Gamma-INIT-SINGLE-PPO\\PPO\\PPO-8000114.onnx",
+                "reward": 28.649520964849565,
+                "creation_time": 1702433420.084398,
+                "auxillary_file_paths": [
+                    "results\\Gamma-INIT-SINGLE-PPO\\PPO\\PPO-8000114.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 8000114,
+            "file_path": "results\\Gamma-INIT-SINGLE-PPO\\PPO.onnx",
+            "reward": 28.649520964849565,
+            "creation_time": 1702433420.084398,
+            "auxillary_file_paths": [
+                "results\\Gamma-INIT-SINGLE-PPO\\PPO\\PPO-8000114.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}

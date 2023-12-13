@@ -257,7 +257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BehaviorName
-      value: SAC
+      value: SAC-TEST
       objectReference: {fileID: 0}
     - target: {fileID: 6741765316954676616, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_LocalPosition.x
