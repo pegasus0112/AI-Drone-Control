@@ -1,0 +1,65 @@
+{
+    "SAC": {
+        "checkpoints": [
+            {
+                "steps": 2499991,
+                "file_path": "results\\gamma-init-correction-single-sac\\SAC\\SAC-2499991.onnx",
+                "reward": 74.94000053405762,
+                "creation_time": 1702535246.895248,
+                "auxillary_file_paths": [
+                    "results\\gamma-init-correction-single-sac\\SAC\\SAC-2499991.pt"
+                ]
+            },
+            {
+                "steps": 2999990,
+                "file_path": "results\\gamma-init-correction-single-sac\\SAC\\SAC-2999990.onnx",
+                "reward": null,
+                "creation_time": 1702546116.1555414,
+                "auxillary_file_paths": [
+                    "results\\gamma-init-correction-single-sac\\SAC\\SAC-2999990.pt"
+                ]
+            },
+            {
+                "steps": 3499993,
+                "file_path": "results\\gamma-init-correction-single-sac\\SAC\\SAC-3499993.onnx",
+                "reward": null,
+                "creation_time": 1702557468.3407407,
+                "auxillary_file_paths": [
+                    "results\\gamma-init-correction-single-sac\\SAC\\SAC-3499993.pt"
+                ]
+            },
+            {
+                "steps": 3999973,
+                "file_path": "results\\gamma-init-correction-single-sac\\SAC\\SAC-3999973.onnx",
+                "reward": 17.093333800633747,
+                "creation_time": 1702568164.1326292,
+                "auxillary_file_paths": [
+                    "results\\gamma-init-correction-single-sac\\SAC\\SAC-3999973.pt"
+                ]
+            },
+            {
+                "steps": 4000037,
+                "file_path": "results\\gamma-init-correction-single-sac\\SAC\\SAC-4000037.onnx",
+                "reward": 17.093333800633747,
+                "creation_time": 1702568164.58132,
+                "auxillary_file_paths": [
+                    "results\\gamma-init-correction-single-sac\\SAC\\SAC-4000037.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4000037,
+            "file_path": "results\\gamma-init-correction-single-sac\\SAC.onnx",
+            "reward": 17.093333800633747,
+            "creation_time": 1702568164.58132,
+            "auxillary_file_paths": [
+                "results\\gamma-init-correction-single-sac\\SAC\\SAC-4000037.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}
