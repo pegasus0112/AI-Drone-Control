@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cleared: 0
-  pointsForClearing: 15
+  pointsForClearing: 30
   type: 1
   maxGateClearTime: 4
   minDistanceToOtherObjects: 3
