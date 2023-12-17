@@ -1,0 +1,56 @@
+{
+    "SAC-Test-1": {
+        "checkpoints": [
+            {
+                "steps": 499966,
+                "file_path": "results\\gamma-sac-test-conf1\\SAC-Test-1\\SAC-Test-1-499966.onnx",
+                "reward": null,
+                "creation_time": 1702651841.1330385,
+                "auxillary_file_paths": [
+                    "results\\gamma-sac-test-conf1\\SAC-Test-1\\SAC-Test-1-499966.pt"
+                ]
+            },
+            {
+                "steps": 999938,
+                "file_path": "results\\gamma-sac-test-conf1\\SAC-Test-1\\SAC-Test-1-999938.onnx",
+                "reward": null,
+                "creation_time": 1702682328.1478975,
+                "auxillary_file_paths": [
+                    "results\\gamma-sac-test-conf1\\SAC-Test-1\\SAC-Test-1-999938.pt"
+                ]
+            },
+            {
+                "steps": 1499990,
+                "file_path": "results\\gamma-sac-test-conf1\\SAC-Test-1\\SAC-Test-1-1499990.onnx",
+                "reward": null,
+                "creation_time": 1702707891.5979824,
+                "auxillary_file_paths": [
+                    "results\\gamma-sac-test-conf1\\SAC-Test-1\\SAC-Test-1-1499990.pt"
+                ]
+            },
+            {
+                "steps": 1703396,
+                "file_path": "results\\gamma-sac-test-conf1\\SAC-Test-1\\SAC-Test-1-1703396.onnx",
+                "reward": null,
+                "creation_time": 1702719003.9412687,
+                "auxillary_file_paths": [
+                    "results\\gamma-sac-test-conf1\\SAC-Test-1\\SAC-Test-1-1703396.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1703396,
+            "file_path": "results\\gamma-sac-test-conf1\\SAC-Test-1.onnx",
+            "reward": null,
+            "creation_time": 1702719003.9412687,
+            "auxillary_file_paths": [
+                "results\\gamma-sac-test-conf1\\SAC-Test-1\\SAC-Test-1-1703396.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}

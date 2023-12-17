@@ -1,0 +1,56 @@
+{
+    "SAC-Test-1": {
+        "checkpoints": [
+            {
+                "steps": 499957,
+                "file_path": "results\\gamma-sac-test-conf1-no-flight-reward\\SAC-Test-1\\SAC-Test-1-499957.onnx",
+                "reward": null,
+                "creation_time": 1702747246.3037694,
+                "auxillary_file_paths": [
+                    "results\\gamma-sac-test-conf1-no-flight-reward\\SAC-Test-1\\SAC-Test-1-499957.pt"
+                ]
+            },
+            {
+                "steps": 999986,
+                "file_path": "results\\gamma-sac-test-conf1-no-flight-reward\\SAC-Test-1\\SAC-Test-1-999986.onnx",
+                "reward": null,
+                "creation_time": 1702775575.9023767,
+                "auxillary_file_paths": [
+                    "results\\gamma-sac-test-conf1-no-flight-reward\\SAC-Test-1\\SAC-Test-1-999986.pt"
+                ]
+            },
+            {
+                "steps": 1499938,
+                "file_path": "results\\gamma-sac-test-conf1-no-flight-reward\\SAC-Test-1\\SAC-Test-1-1499938.onnx",
+                "reward": null,
+                "creation_time": 1702801918.0886533,
+                "auxillary_file_paths": [
+                    "results\\gamma-sac-test-conf1-no-flight-reward\\SAC-Test-1\\SAC-Test-1-1499938.pt"
+                ]
+            },
+            {
+                "steps": 1638324,
+                "file_path": "results\\gamma-sac-test-conf1-no-flight-reward\\SAC-Test-1\\SAC-Test-1-1638324.onnx",
+                "reward": null,
+                "creation_time": 1702811843.301204,
+                "auxillary_file_paths": [
+                    "results\\gamma-sac-test-conf1-no-flight-reward\\SAC-Test-1\\SAC-Test-1-1638324.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1638324,
+            "file_path": "results\\gamma-sac-test-conf1-no-flight-reward\\SAC-Test-1.onnx",
+            "reward": null,
+            "creation_time": 1702811843.301204,
+            "auxillary_file_paths": [
+                "results\\gamma-sac-test-conf1-no-flight-reward\\SAC-Test-1\\SAC-Test-1-1638324.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}
