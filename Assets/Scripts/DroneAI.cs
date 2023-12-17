@@ -35,20 +35,17 @@ public class DroneAI : Agent
 
     public override void CollectObservations(VectorSensor sensor)
     {
+        sensor.AddObservation(droneHandler.isGrounded);
+
         sensor.AddObservation(droneHandler.droneFrameState);
         sensor.AddObservation(droneHandler.rotorStateLF);
         sensor.AddObservation(droneHandler.rotorStateRF);
         sensor.AddObservation(droneHandler.rotorStateLB);
         sensor.AddObservation(droneHandler.rotorStateRB);
 
-        sensor.AddObservation(droneHandler.isGrounded);
-
         //later add acceleration & rotation
         sensor.AddObservation(new Vector3(droneRig.velocity.x, droneRig.velocity.y, droneRig.velocity.z));
         sensor.AddObservation(gameObject.transform.rotation);
-
-        // y height (relative heigth to ground)
-        sensor.AddObservation(gameObject.transform.position.y - environmentManager.ground.position.y);
 
         // current controls
         sensor.AddObservation(droneControl.throttle);
