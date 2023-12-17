@@ -1,0 +1,56 @@
+{
+    "PPO": {
+        "checkpoints": [
+            {
+                "steps": 999532,
+                "file_path": "results\\gamma-init-ppo-complexer-test-extended\\PPO\\PPO-999532.onnx",
+                "reward": -17.259998313585918,
+                "creation_time": 1702591366.8987856,
+                "auxillary_file_paths": [
+                    "results\\gamma-init-ppo-complexer-test-extended\\PPO\\PPO-999532.pt"
+                ]
+            },
+            {
+                "steps": 1999641,
+                "file_path": "results\\gamma-init-ppo-complexer-test-extended\\PPO\\PPO-1999641.onnx",
+                "reward": -17.54588209881502,
+                "creation_time": 1702601322.5811367,
+                "auxillary_file_paths": [
+                    "results\\gamma-init-ppo-complexer-test-extended\\PPO\\PPO-1999641.pt"
+                ]
+            },
+            {
+                "steps": 2998847,
+                "file_path": "results\\gamma-init-ppo-complexer-test-extended\\PPO\\PPO-2998847.onnx",
+                "reward": -23.461903980800084,
+                "creation_time": 1702611162.2637174,
+                "auxillary_file_paths": [
+                    "results\\gamma-init-ppo-complexer-test-extended\\PPO\\PPO-2998847.pt"
+                ]
+            },
+            {
+                "steps": 3000295,
+                "file_path": "results\\gamma-init-ppo-complexer-test-extended\\PPO\\PPO-3000295.onnx",
+                "reward": -22.61363549665971,
+                "creation_time": 1702611162.5516968,
+                "auxillary_file_paths": [
+                    "results\\gamma-init-ppo-complexer-test-extended\\PPO\\PPO-3000295.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3000295,
+            "file_path": "results\\gamma-init-ppo-complexer-test-extended\\PPO.onnx",
+            "reward": -22.61363549665971,
+            "creation_time": 1702611162.5516968,
+            "auxillary_file_paths": [
+                "results\\gamma-init-ppo-complexer-test-extended\\PPO\\PPO-3000295.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}
