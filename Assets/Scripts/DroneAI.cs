@@ -82,9 +82,6 @@ public class DroneAI : Agent
             AddReward(rewardForFlyingOverTime * Time.deltaTime);
         }
     }
-
-
-
     public override void Heuristic(in ActionBuffers actionsOut)
     {
         if (selfPlay)
