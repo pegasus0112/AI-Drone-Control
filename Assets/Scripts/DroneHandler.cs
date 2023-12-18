@@ -91,7 +91,7 @@ public class DroneHandler : MonoBehaviour
 
     }
 
-    //Walls & Ground
+    //walls, ground & gate frame
     private void OnCollisionEnter(Collision collision)
     {
         GameObject ownHittedObject = collision.GetContact(0).thisCollider.gameObject;
