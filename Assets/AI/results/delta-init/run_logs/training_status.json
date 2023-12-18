@@ -1,0 +1,65 @@
+{
+    "SAC": {
+        "checkpoints": [
+            {
+                "steps": 2499949,
+                "file_path": "results\\delta-init\\SAC\\SAC-2499949.onnx",
+                "reward": null,
+                "creation_time": 1702881177.499334,
+                "auxillary_file_paths": [
+                    "results\\delta-init\\SAC\\SAC-2499949.pt"
+                ]
+            },
+            {
+                "steps": 2999953,
+                "file_path": "results\\delta-init\\SAC\\SAC-2999953.onnx",
+                "reward": 29.600000023841858,
+                "creation_time": 1702891963.2890286,
+                "auxillary_file_paths": [
+                    "results\\delta-init\\SAC\\SAC-2999953.pt"
+                ]
+            },
+            {
+                "steps": 3499942,
+                "file_path": "results\\delta-init\\SAC\\SAC-3499942.onnx",
+                "reward": null,
+                "creation_time": 1702902968.2508574,
+                "auxillary_file_paths": [
+                    "results\\delta-init\\SAC\\SAC-3499942.pt"
+                ]
+            },
+            {
+                "steps": 3999992,
+                "file_path": "results\\delta-init\\SAC\\SAC-3999992.onnx",
+                "reward": null,
+                "creation_time": 1702914019.9822562,
+                "auxillary_file_paths": [
+                    "results\\delta-init\\SAC\\SAC-3999992.pt"
+                ]
+            },
+            {
+                "steps": 4001208,
+                "file_path": "results\\delta-init\\SAC\\SAC-4001080.onnx",
+                "reward": null,
+                "creation_time": 1702914021.5528834,
+                "auxillary_file_paths": [
+                    "results\\delta-init\\SAC\\SAC-4001080.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4001208,
+            "file_path": "results\\delta-init\\SAC.onnx",
+            "reward": null,
+            "creation_time": 1702914021.5528834,
+            "auxillary_file_paths": [
+                "results\\delta-init\\SAC\\SAC-4001080.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}
