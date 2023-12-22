@@ -1,0 +1,65 @@
+{
+    "SAC-Buffer": {
+        "checkpoints": [
+            {
+                "steps": 2499987,
+                "file_path": "results\\delta-init-more-buffer\\SAC-Buffer\\SAC-Buffer-2499987.onnx",
+                "reward": null,
+                "creation_time": 1703047133.615925,
+                "auxillary_file_paths": [
+                    "results\\delta-init-more-buffer\\SAC-Buffer\\SAC-Buffer-2499987.pt"
+                ]
+            },
+            {
+                "steps": 2999945,
+                "file_path": "results\\delta-init-more-buffer\\SAC-Buffer\\SAC-Buffer-2999945.onnx",
+                "reward": null,
+                "creation_time": 1703084680.3451223,
+                "auxillary_file_paths": [
+                    "results\\delta-init-more-buffer\\SAC-Buffer\\SAC-Buffer-2999945.pt"
+                ]
+            },
+            {
+                "steps": 3499962,
+                "file_path": "results\\delta-init-more-buffer\\SAC-Buffer\\SAC-Buffer-3499962.onnx",
+                "reward": 29.400000035762787,
+                "creation_time": 1703123399.7539113,
+                "auxillary_file_paths": [
+                    "results\\delta-init-more-buffer\\SAC-Buffer\\SAC-Buffer-3499962.pt"
+                ]
+            },
+            {
+                "steps": 3999940,
+                "file_path": "results\\delta-init-more-buffer\\SAC-Buffer\\SAC-Buffer-3999940.onnx",
+                "reward": null,
+                "creation_time": 1703162141.2410567,
+                "auxillary_file_paths": [
+                    "results\\delta-init-more-buffer\\SAC-Buffer\\SAC-Buffer-3999940.pt"
+                ]
+            },
+            {
+                "steps": 4000512,
+                "file_path": "results\\delta-init-more-buffer\\SAC-Buffer\\SAC-Buffer-4000256.onnx",
+                "reward": 28.600000143051147,
+                "creation_time": 1703162144.4550705,
+                "auxillary_file_paths": [
+                    "results\\delta-init-more-buffer\\SAC-Buffer\\SAC-Buffer-4000256.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4000512,
+            "file_path": "results\\delta-init-more-buffer\\SAC-Buffer.onnx",
+            "reward": 28.600000143051147,
+            "creation_time": 1703162144.4550705,
+            "auxillary_file_paths": [
+                "results\\delta-init-more-buffer\\SAC-Buffer\\SAC-Buffer-4000256.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}

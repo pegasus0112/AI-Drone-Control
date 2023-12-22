@@ -47,7 +47,7 @@ behaviors:
         gamma: 0.99
         strength: 1.0
     keep_checkpoints: 5
-    max_steps: 8000000
+    max_steps: 4000000
     time_horizon: 64
     summary_freq: 2000
     threaded: true
@@ -56,11 +56,11 @@ behaviors:
     hyperparameters:
       learning_rate: 0.00006
       learning_rate_schedule: constant
-      batch_size: 512 #256 vorher
+      batch_size: 256
       buffer_size: 200000
-      buffer_init_steps: 2000 #0 vorher
+      buffer_init_steps: 20000 #0 vorher
       tau: 0.005
-      steps_per_update: 3 #10 vorher
+      steps_per_update: 5 #10 vorher
       save_replay_buffer: false
       init_entcoef: 1.0 #0.5 vorher
     network_settings:
@@ -77,18 +77,18 @@ behaviors:
     time_horizon: 64
     summary_freq: 2000
     threaded: true
-  SAC-Test-2:
+  SAC-Test-1-TH:
     trainer_type: sac
     hyperparameters:
-      learning_rate: 0.0001 #0.00006 vorher
-      learning_rate_schedule: linear
-      batch_size: 512 #256 vorher
-      buffer_size: 600000 #299k vorher
-      buffer_init_steps: 2000
+      learning_rate: 0.00006
+      learning_rate_schedule: constant
+      batch_size: 256
+      buffer_size: 200000
+      buffer_init_steps: 20000 #0 vorher
       tau: 0.005
-      steps_per_update: 3
+      steps_per_update: 5 #10 vorher
       save_replay_buffer: false
-      init_entcoef: 1.0
+      init_entcoef: 1.0 #0.5 vorher
     network_settings:
       normalize: true #false vorher
       hidden_units: 128
@@ -100,6 +100,32 @@ behaviors:
         strength: 1.0
     keep_checkpoints: 5
     max_steps: 4000000
-    time_horizon: 512 #64 vorher
+    time_horizon: 256
+    summary_freq: 2000
+    threaded: true
+  SAC-Test-2:
+    trainer_type: sac
+    hyperparameters:
+      learning_rate: 0.0001 #0.00006 vorher
+      learning_rate_schedule: linear # constant vorher
+      batch_size: 256
+      buffer_size: 400000
+      buffer_init_steps: 20000  #0 vorher
+      tau: 0.005
+      steps_per_update: 3  #10 vorher
+      save_replay_buffer: false
+      init_entcoef: 1.0  #0.5 vorher
+    network_settings:
+      normalize: true #false vorher
+      hidden_units: 128
+      num_layers: 3 #2 vorher
+      vis_encode_type: simple
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+    keep_checkpoints: 5
+    max_steps: 4000000
+    time_horizon: 256 #64 vorher
     summary_freq: 2000
     threaded: true
