@@ -1,0 +1,65 @@
+{
+    "SAC-Test-1": {
+        "checkpoints": [
+            {
+                "steps": 2499961,
+                "file_path": "results\\delta-init-sac-test-1\\SAC-Test-1\\SAC-Test-1-2499961.onnx",
+                "reward": 79.19999990860622,
+                "creation_time": 1703239640.1373248,
+                "auxillary_file_paths": [
+                    "results\\delta-init-sac-test-1\\SAC-Test-1\\SAC-Test-1-2499961.pt"
+                ]
+            },
+            {
+                "steps": 2999995,
+                "file_path": "results\\delta-init-sac-test-1\\SAC-Test-1\\SAC-Test-1-2999995.onnx",
+                "reward": null,
+                "creation_time": 1703257380.7123063,
+                "auxillary_file_paths": [
+                    "results\\delta-init-sac-test-1\\SAC-Test-1\\SAC-Test-1-2999995.pt"
+                ]
+            },
+            {
+                "steps": 3499948,
+                "file_path": "results\\delta-init-sac-test-1\\SAC-Test-1\\SAC-Test-1-3499948.onnx",
+                "reward": null,
+                "creation_time": 1703275424.8185644,
+                "auxillary_file_paths": [
+                    "results\\delta-init-sac-test-1\\SAC-Test-1\\SAC-Test-1-3499948.pt"
+                ]
+            },
+            {
+                "steps": 3999946,
+                "file_path": "results\\delta-init-sac-test-1\\SAC-Test-1\\SAC-Test-1-3999946.onnx",
+                "reward": null,
+                "creation_time": 1703293478.3894424,
+                "auxillary_file_paths": [
+                    "results\\delta-init-sac-test-1\\SAC-Test-1\\SAC-Test-1-3999946.pt"
+                ]
+            },
+            {
+                "steps": 4000330,
+                "file_path": "results\\delta-init-sac-test-1\\SAC-Test-1\\SAC-Test-1-4000330.onnx",
+                "reward": null,
+                "creation_time": 1703293479.2988043,
+                "auxillary_file_paths": [
+                    "results\\delta-init-sac-test-1\\SAC-Test-1\\SAC-Test-1-4000330.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4000330,
+            "file_path": "results\\delta-init-sac-test-1\\SAC-Test-1.onnx",
+            "reward": null,
+            "creation_time": 1703293479.2988043,
+            "auxillary_file_paths": [
+                "results\\delta-init-sac-test-1\\SAC-Test-1\\SAC-Test-1-4000330.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}
