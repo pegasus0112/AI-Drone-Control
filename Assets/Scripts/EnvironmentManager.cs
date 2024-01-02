@@ -10,8 +10,8 @@ public class EnvironmentManager : MonoBehaviour
     {
         NONE,
         HITTABLEBLOCK,
-        BIGGATE,
-        SMALLGATE
+        SMALLGATE,
+        BIGGATE
     }
 
     [Header("Status")]

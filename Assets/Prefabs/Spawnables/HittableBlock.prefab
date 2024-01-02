@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 6315321816403639551}
   - component: {fileID: 8616037456429703069}
   - component: {fileID: 4063911666544470902}
-  - component: {fileID: 1301505454572280871}
-  - component: {fileID: 6500507963507093883}
+  - component: {fileID: -7800250052342883009}
   m_Layer: 0
   m_Name: HittableBlock
   m_TagString: HittableBlock
@@ -107,7 +106,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1301505454572280871
+--- !u!114 &-7800250052342883009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,35 +115,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3303939040269964123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 278c9fb1586b67f479b12d7f087f25cc, type: 3}
+  m_Script: {fileID: 11500000, guid: 829e2218f15abb1458f55ea76137702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cleared: 0
   pointsForClearing: 30
-  type: 1
-  maxGateClearTime: 4
-  minDistanceToOtherObjects: 3
+  minDistanceToOtherObjects: 3.5
   hittableMaterialTransparency: 0.7
-  sphereCollider: {fileID: 6500507963507093883}
   hittablepart: {fileID: 3303939040269964123}
---- !u!135 &6500507963507093883
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3303939040269964123}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 3
-  m_Center: {x: 0, y: 0, z: 0}
