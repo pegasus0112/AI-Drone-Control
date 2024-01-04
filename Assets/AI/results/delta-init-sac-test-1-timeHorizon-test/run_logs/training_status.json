@@ -1,0 +1,123 @@
+{
+    "SAC-Test-1-TH-LOW": {
+        "checkpoints": [
+            {
+                "steps": 2499968,
+                "file_path": "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-2499968.onnx",
+                "reward": null,
+                "creation_time": 1703607666.255446,
+                "auxillary_file_paths": [
+                    "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-2499968.pt"
+                ]
+            },
+            {
+                "steps": 2999977,
+                "file_path": "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-2999977.onnx",
+                "reward": null,
+                "creation_time": 1703798992.812338,
+                "auxillary_file_paths": [
+                    "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-2999977.pt"
+                ]
+            },
+            {
+                "steps": 3499973,
+                "file_path": "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-3499973.onnx",
+                "reward": null,
+                "creation_time": 1703860077.1676955,
+                "auxillary_file_paths": [
+                    "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-3499973.pt"
+                ]
+            },
+            {
+                "steps": 3999985,
+                "file_path": "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-3999985.onnx",
+                "reward": null,
+                "creation_time": 1703918213.8547258,
+                "auxillary_file_paths": [
+                    "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-3999985.pt"
+                ]
+            },
+            {
+                "steps": 4080414,
+                "file_path": "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-4080414.onnx",
+                "reward": 106.02105257385655,
+                "creation_time": 1703924487.3013275,
+                "auxillary_file_paths": [
+                    "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-4080414.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4080414,
+            "file_path": "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-LOW.onnx",
+            "reward": 106.02105257385655,
+            "creation_time": 1703924487.3013275,
+            "auxillary_file_paths": [
+                "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-4080414.pt"
+            ]
+        }
+    },
+    "SAC-Test-1-TH-HIGH": {
+        "checkpoints": [
+            {
+                "steps": 2499990,
+                "file_path": "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-HIGH\\SAC-Test-1-TH-HIGH-2499990.onnx",
+                "reward": 13.09999942779541,
+                "creation_time": 1703632804.5318458,
+                "auxillary_file_paths": [
+                    "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-HIGH\\SAC-Test-1-TH-HIGH-2499990.pt"
+                ]
+            },
+            {
+                "steps": 2999924,
+                "file_path": "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-HIGH\\SAC-Test-1-TH-HIGH-2999924.onnx",
+                "reward": null,
+                "creation_time": 1703805946.86104,
+                "auxillary_file_paths": [
+                    "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-HIGH\\SAC-Test-1-TH-HIGH-2999924.pt"
+                ]
+            },
+            {
+                "steps": 3499844,
+                "file_path": "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-HIGH\\SAC-Test-1-TH-HIGH-3499844.onnx",
+                "reward": 10.516666889190674,
+                "creation_time": 1703867271.514271,
+                "auxillary_file_paths": [
+                    "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-HIGH\\SAC-Test-1-TH-HIGH-3499844.pt"
+                ]
+            },
+            {
+                "steps": 3999885,
+                "file_path": "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-HIGH\\SAC-Test-1-TH-HIGH-3999885.onnx",
+                "reward": 7.666667938232422,
+                "creation_time": 1703924483.595165,
+                "auxillary_file_paths": [
+                    "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-HIGH\\SAC-Test-1-TH-HIGH-3999885.pt"
+                ]
+            },
+            {
+                "steps": 4001256,
+                "file_path": "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-HIGH\\SAC-Test-1-TH-HIGH-4000744.onnx",
+                "reward": 12.450001239776611,
+                "creation_time": 1703924485.8977268,
+                "auxillary_file_paths": [
+                    "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-HIGH\\SAC-Test-1-TH-HIGH-4000744.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4001256,
+            "file_path": "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-HIGH.onnx",
+            "reward": 12.450001239776611,
+            "creation_time": 1703924485.8977268,
+            "auxillary_file_paths": [
+                "results\\delta-init-sac-test-1-timeHorizon-test\\SAC-Test-1-TH-HIGH\\SAC-Test-1-TH-HIGH-4000744.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}
