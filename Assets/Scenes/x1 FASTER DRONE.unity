@@ -223,6 +223,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4024019001229936181, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: spawnables
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024019001229936181, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: spawnableCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024019001229936181, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
+      propertyPath: environmentSize
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5516042960864725730, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_Name
       value: AI-Env

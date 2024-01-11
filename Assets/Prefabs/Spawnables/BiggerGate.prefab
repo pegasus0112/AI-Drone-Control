@@ -1625,8 +1625,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cleared: 0
   pointsForClearing: 30
-  minDistanceToOtherObjects: 15
-  hittableMaterialTransparency: 1
+  minDistanceToOtherObjects: 11
+  hittableMaterialTransparency: 0.7
   hittablepart: {fileID: 17564485030585500}
   maxGateClearTime: 4
 --- !u!54 &7465639956246027928

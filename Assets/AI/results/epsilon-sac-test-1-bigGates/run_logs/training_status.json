@@ -1,0 +1,65 @@
+{
+    "SAC-Test-1": {
+        "checkpoints": [
+            {
+                "steps": 999990,
+                "file_path": "results\\epsilon-sac-test-1-bigGates\\SAC-Test-1\\SAC-Test-1-999990.onnx",
+                "reward": null,
+                "creation_time": 1704425002.6758268,
+                "auxillary_file_paths": [
+                    "results\\epsilon-sac-test-1-bigGates\\SAC-Test-1\\SAC-Test-1-999990.pt"
+                ]
+            },
+            {
+                "steps": 1499974,
+                "file_path": "results\\epsilon-sac-test-1-bigGates\\SAC-Test-1\\SAC-Test-1-1499974.onnx",
+                "reward": null,
+                "creation_time": 1704441577.4507408,
+                "auxillary_file_paths": [
+                    "results\\epsilon-sac-test-1-bigGates\\SAC-Test-1\\SAC-Test-1-1499974.pt"
+                ]
+            },
+            {
+                "steps": 1999956,
+                "file_path": "results\\epsilon-sac-test-1-bigGates\\SAC-Test-1\\SAC-Test-1-1999956.onnx",
+                "reward": null,
+                "creation_time": 1704458705.6128657,
+                "auxillary_file_paths": [
+                    "results\\epsilon-sac-test-1-bigGates\\SAC-Test-1\\SAC-Test-1-1999956.pt"
+                ]
+            },
+            {
+                "steps": 2499956,
+                "file_path": "results\\epsilon-sac-test-1-bigGates\\SAC-Test-1\\SAC-Test-1-2499956.onnx",
+                "reward": null,
+                "creation_time": 1704476214.668447,
+                "auxillary_file_paths": [
+                    "results\\epsilon-sac-test-1-bigGates\\SAC-Test-1\\SAC-Test-1-2499956.pt"
+                ]
+            },
+            {
+                "steps": 2912030,
+                "file_path": "results\\epsilon-sac-test-1-bigGates\\SAC-Test-1\\SAC-Test-1-2912030.onnx",
+                "reward": null,
+                "creation_time": 1704490943.0762856,
+                "auxillary_file_paths": [
+                    "results\\epsilon-sac-test-1-bigGates\\SAC-Test-1\\SAC-Test-1-2912030.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2912030,
+            "file_path": "results\\epsilon-sac-test-1-bigGates\\SAC-Test-1.onnx",
+            "reward": null,
+            "creation_time": 1704490943.0762856,
+            "auxillary_file_paths": [
+                "results\\epsilon-sac-test-1-bigGates\\SAC-Test-1\\SAC-Test-1-2912030.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}
