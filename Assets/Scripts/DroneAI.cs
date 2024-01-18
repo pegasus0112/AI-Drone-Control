@@ -1,4 +1,3 @@
-using System;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
@@ -37,14 +36,17 @@ public class DroneAI : Agent
     {
         sensor.AddObservation(droneHandler.isGrounded);
 
+        // drone collision states
         sensor.AddObservation(droneHandler.droneFrameState);
         sensor.AddObservation(droneHandler.rotorStateLF);
         sensor.AddObservation(droneHandler.rotorStateRF);
         sensor.AddObservation(droneHandler.rotorStateLB);
         sensor.AddObservation(droneHandler.rotorStateRB);
 
-        //later add acceleration & rotation
+        //speed in all directions
         sensor.AddObservation(new Vector3(droneRig.velocity.x, droneRig.velocity.y, droneRig.velocity.z));
+
+        // drone rotation
         sensor.AddObservation(gameObject.transform.rotation);
 
         // current controls
@@ -55,40 +57,45 @@ public class DroneAI : Agent
     }
 
 
-    // Update is called once per frame
     void FixedUpdate()
     {
+        AddRewardAndPenalties();
+
+        // drone crashed?
         if (droneHandler.CheckPartsAreOkay())
         {
+            
             RequestDecision();
         }
         else
         {
-            //GAME OVER
+            //GAME OVER & env reset
             AddReward(penalyForCrashing);
             environmentManager.EndTraining();
         }
-
-        AddRewardAndPenalties();
     }
 
     private void AddRewardAndPenalties()
     {
-        if(droneHandler.isGrounded)
+        if (droneHandler.isGrounded)
         {
             AddReward(penaltyForGroundedOverTime * Time.deltaTime);
-        } else
+        }
+        else
         {
             AddReward(rewardForFlyingOverTime * Time.deltaTime);
         }
     }
     public override void Heuristic(in ActionBuffers actionsOut)
     {
+        
         if (selfPlay)
         {
             var continuousActionsOut = actionsOut.ContinuousActions;
 
             manualControl.ReadUserInputJoysticks();
+
+            //overwriting controls with manual control
             continuousActionsOut[0] = manualControl.throttle;
             continuousActionsOut[1] = manualControl.yaw;
             continuousActionsOut[2] = manualControl.pitch;
@@ -106,8 +113,7 @@ public class DroneAI : Agent
 
     public void Scored(float points)
     {
-        //Debug.Log("Drone scored " + points);
-        Debug.Log("Drone scored ");
+        Debug.Log("Drone scored");
         clearedObjectCount++;
         AddReward(points);
     }
@@ -115,7 +121,7 @@ public class DroneAI : Agent
     public void EndEpisodeBecauseTooLongGrounded()
     {
         Debug.Log("Resetting training because of ground time");
-        //AddReward(penaltyForTooLongGrounded);
+        AddReward(penaltyForTooLongGrounded);
         environmentManager.EndTraining();
     }
 }

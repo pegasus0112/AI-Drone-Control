@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class SpawnableBlock : SpawnableObject
 {
-    // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
+        //blocks directly cleared on collision
         cleared = true;
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnableGate : SpawnableObject
 {
-    private HashSet<string> clearedMotors = new HashSet<string>();
+    private HashSet<string> clearedMotors = new(); //list of motors hitted with gate
     private float lastGateHit = -1;
     public float maxGateClearTime = 4;
 
