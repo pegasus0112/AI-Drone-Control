@@ -1,0 +1,65 @@
+{
+    "SAC-Test-1-TH-LOW": {
+        "checkpoints": [
+            {
+                "steps": 1499987,
+                "file_path": "results\\delta-less-x1\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-1499987.onnx",
+                "reward": null,
+                "creation_time": 1705014752.724278,
+                "auxillary_file_paths": [
+                    "results\\delta-less-x1\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-1499987.pt"
+                ]
+            },
+            {
+                "steps": 1999987,
+                "file_path": "results\\delta-less-x1\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-1999987.onnx",
+                "reward": -24.733000211417675,
+                "creation_time": 1705031419.973179,
+                "auxillary_file_paths": [
+                    "results\\delta-less-x1\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-1999987.pt"
+                ]
+            },
+            {
+                "steps": 2499979,
+                "file_path": "results\\delta-less-x1\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-2499979.onnx",
+                "reward": null,
+                "creation_time": 1705048438.1723175,
+                "auxillary_file_paths": [
+                    "results\\delta-less-x1\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-2499979.pt"
+                ]
+            },
+            {
+                "steps": 2999977,
+                "file_path": "results\\delta-less-x1\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-2999977.onnx",
+                "reward": null,
+                "creation_time": 1705065780.2761195,
+                "auxillary_file_paths": [
+                    "results\\delta-less-x1\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-2999977.pt"
+                ]
+            },
+            {
+                "steps": 3168152,
+                "file_path": "results\\delta-less-x1\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-3168152.onnx",
+                "reward": null,
+                "creation_time": 1705071578.7775416,
+                "auxillary_file_paths": [
+                    "results\\delta-less-x1\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-3168152.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3168152,
+            "file_path": "results\\delta-less-x1\\SAC-Test-1-TH-LOW.onnx",
+            "reward": null,
+            "creation_time": 1705071578.7775416,
+            "auxillary_file_paths": [
+                "results\\delta-less-x1\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-3168152.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}
