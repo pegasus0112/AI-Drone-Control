@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using static DroneHandler;
 
@@ -10,10 +8,10 @@ public class Motor : MonoBehaviour
     [Range(0, 1)] public float motorSpeed = 0;
     public ROTOR motorPosition;
 
-    //1 == cw
-    //-1 == ccw
+    //1 == cw and -1 == ccw
     private float spinDirection = 1;
 
+    // max rotation speed of rotors
     public float maxRPM = 3500;
     public GameObject rotor;
 
@@ -33,36 +31,28 @@ public class Motor : MonoBehaviour
     //drone rigidbody shared by all motors
     public Rigidbody droneRig;
 
-    // Start is called before the first frame update
     void Start()
     {
+        // setting rotor spin direction based on motor position
         if (motorPosition == ROTOR.RF || motorPosition == ROTOR.LB)
         {
             spinDirection = -1;
         }
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        droneRig.AddForceAtPosition(transform.up * motorSpeed * forceMultiplier, forcePoint.position);
+        // adding force & rotation
+        droneRig.AddForceAtPosition(forceMultiplier * motorSpeed * transform.up, forcePoint.position);
         rotor.transform.Rotate(Vector3.up, spinDirection * Remap(motorSpeed, 0, 1, 360, maxRPM) * Time.deltaTime);
 
-        //TODO: GroundCheck
         isGrounded = CheckGrounded();
-
     }
 
     private bool CheckGrounded()
     {
         Collider[] hitColliders = Physics.OverlapSphere(groundCheckPoint.position, toCheckGroundDistance);
-        return Array.Exists(hitColliders, coll => coll.tag == "Ground" || coll.tag == "Wall");
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.gray;
-        Gizmos.DrawWireSphere(groundCheckPoint.position, toCheckGroundDistance);
+        return Array.Exists(hitColliders, coll => coll.CompareTag("Ground") || coll.CompareTag("Wall"));
     }
 
     float Remap(float value, float from1, float to1, float from2, float to2)

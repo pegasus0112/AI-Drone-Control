@@ -1,7 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class DroneHandler : MonoBehaviour
@@ -17,7 +14,7 @@ public class DroneHandler : MonoBehaviour
     public DroneControl droneControl;
     public DroneAI droneAI;
 
-    //are drone parts okay?
+    //are parts okay
     public bool droneFrameState = true;
     public bool rotorStateLF = true;
     public bool rotorStateRF = true;
@@ -34,7 +31,7 @@ public class DroneHandler : MonoBehaviour
 
     private int lastHitObjectHash = -1;
 
-    //important for resetting state after restarting training
+    //resetting drone states after restarting training
     private void OnEnable()
     {
         lastGroundTime = -1;
@@ -45,16 +42,9 @@ public class DroneHandler : MonoBehaviour
         rotorStateRB = true;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
+    //everything except controle and AI
     void FixedUpdate()
     {
-        //Everything except controle and AI
         CheckAnyMotorGrounded();
         ResetDroneIfTooLongOnGround();
     }
@@ -73,7 +63,7 @@ public class DroneHandler : MonoBehaviour
     }
     private void ResetDroneIfTooLongOnGround()
     {
-        if(isGrounded)
+        if (isGrounded)
         {
             float currentTime = Time.time;
             if (isGrounded && lastGroundTime == -1)
@@ -84,18 +74,18 @@ public class DroneHandler : MonoBehaviour
             {
                 droneAI.EndEpisodeBecauseTooLongGrounded();
             }
-        } else
+        }
+        else
         {
             lastGroundTime = -1;
         }
-
     }
 
-    //walls, ground & gate frame
+    //called for walls, ground or gate frame
     private void OnCollisionEnter(Collision collision)
     {
         GameObject ownHittedObject = collision.GetContact(0).thisCollider.gameObject;
-        if (ownHittedObject.tag == "Rotor")
+        if (ownHittedObject.CompareTag("Rotor"))
         {
             ROTOR hittedMotor = ownHittedObject.transform.parent.parent.GetComponent<Motor>().motorPosition;
 
@@ -116,26 +106,25 @@ public class DroneHandler : MonoBehaviour
                     rotorStateRB = false;
                     break;
             }
-        } else if(ownHittedObject.tag == "Drone")
+        }
+        else if (ownHittedObject.CompareTag("Drone"))
         {
             droneFrameState = false;
         }
-
-        //Debug.Log(collision.GetContact(0).thisCollider.gameObject.tag + " - " + collision.GetContact(0).otherCollider.gameObject.tag);
     }
 
-    //Hittables / Gates
+    //called for hittable parts of spawnables 
     private void OnTriggerEnter(Collider other)
     {
         GameObject hittedSpawnable = other.gameObject;
 
-        if (hittedSpawnable.tag == "Gate" || hittedSpawnable.tag == "HittableBlock")
+        if (hittedSpawnable.CompareTag("Gate") || hittedSpawnable.CompareTag("HittableBlock"))
         {
             SpawnableObject spawnedObject;
 
-            //gate collider does not have the script & only hittable not complete gate would be destroyed later
-            if (hittedSpawnable.tag == "Gate")
+            if (hittedSpawnable.CompareTag("Gate"))
             {
+                //hittable part, not gate collider has script
                 hittedSpawnable = hittedSpawnable.transform.parent.gameObject;
             }
 
@@ -143,17 +132,19 @@ public class DroneHandler : MonoBehaviour
 
             if (spawnedObject.cleared)
             {
-                if(lastHitObjectHash != spawnedObject.GetHashCode())
+                //check already collided with same cleared object
+                if (lastHitObjectHash != spawnedObject.GetHashCode())
                 {
                     lastHitObjectHash = spawnedObject.GetHashCode();
                     droneAI.Scored(spawnedObject.pointsForClearing);
                     Destroy(hittedSpawnable);
-                } else
+                }
+                else
                 {
+                    // multiple hits with same cleared object
                     Debug.Log("object already cleared");
                 }
             }
-
         }
     }
 }

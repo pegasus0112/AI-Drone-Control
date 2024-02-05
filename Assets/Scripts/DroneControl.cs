@@ -1,7 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.XR;
 
 public class DroneControl : MonoBehaviour
 {
@@ -29,70 +27,24 @@ public class DroneControl : MonoBehaviour
         ResetControls();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        CalculateMotorPower();
+        SetMotorPower();
     }
 
-    /*
-     * To remove
-     *     
-     private void CalculateMotorPower()
+    private void SetMotorPower()
     {
-        //throttle
-        newMotorPowerLF = throttle;
-        newMotorPowerRF = throttle;
-        newMotorPowerLB = throttle;
-        newMotorPowerRB = throttle;
-
-        //yaw
-        float calculatedYaw = CalculateRatesValue(yaw);
-        newMotorPowerLF -= calculatedYaw;
-        newMotorPowerRF += calculatedYaw;
-        newMotorPowerLB += calculatedYaw;
-        newMotorPowerRB -= calculatedYaw;
-
-        //pitch
-        float calculatedPitch = CalculateRatesValue(pitch);
-        newMotorPowerLF -= calculatedPitch;
-        newMotorPowerRF -= calculatedPitch;
-        newMotorPowerLB += calculatedPitch;
-        newMotorPowerRB += calculatedPitch;
-
-        //roll
-        float calculatedRoll = CalculateRatesValue(roll);
-        newMotorPowerLF += calculatedRoll;
-        newMotorPowerRF -= calculatedRoll;
-        newMotorPowerLB += calculatedRoll;
-        newMotorPowerRB -= calculatedRoll;
-
-        ClampMotorPower();
-        AddTorqueRotation(calculatedYaw);
-    }
-
-    private void ClampMotorPower()
-    {
-        newMotorPowerLF = Math.Clamp(newMotorPowerLF, 0, 1);
-        newMotorPowerRB = Math.Clamp(newMotorPowerRB, 0, 1);
-        newMotorPowerLB = Math.Clamp(newMotorPowerLB, 0, 1);
-        newMotorPowerRF = Math.Clamp(newMotorPowerRF, 0, 1);
-    }
-     */
-
-
-    private void CalculateMotorPower()
-    {
+        //adding polynomial function
         float calculatedYaw = CalculateRatesValue(yaw);
         float calculatedPitch = CalculateRatesValue(pitch);
         float calculatedRoll = CalculateRatesValue(roll);
 
+        //setting motor speed
         motorLF.motorSpeed = (throttle + ((-calculatedYaw - calculatedPitch + calculatedRoll) / 3)) / 2;
         motorRF.motorSpeed = (throttle + ((calculatedYaw - calculatedPitch - calculatedRoll) / 3)) / 2;
         motorLB.motorSpeed = (throttle + ((calculatedYaw + calculatedPitch + calculatedRoll) / 3)) / 2;
         motorRB.motorSpeed = (throttle + ((-calculatedYaw + calculatedPitch - calculatedRoll) / 3)) / 2;
 
-        //Debug.Log(newMotorPowerLF + " - " + newMotorPowerRF + " - " + newMotorPowerLB + " - " + newMotorPowerRB);
         AddTorqueRotation(calculatedYaw);
     }
 

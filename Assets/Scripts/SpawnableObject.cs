@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnableObject : MonoBehaviour
@@ -18,14 +16,17 @@ public class SpawnableObject : MonoBehaviour
 
     private void Start()
     {
+        //setting color & transparency of hittable part
         Color materialOfHittable = hittablepart.GetComponent<MeshRenderer>().material.color;
         materialOfHittable.a = hittableMaterialTransparency;
         hittablepart.GetComponent<MeshRenderer>().material.color = materialOfHittable;
     }
 
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
+        //draw placement distance to other objects
         Gizmos.DrawWireSphere(transform.position, minDistanceToOtherObjects);
     }
 }

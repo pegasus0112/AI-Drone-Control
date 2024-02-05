@@ -77,28 +77,30 @@ public class EnvironmentManager : MonoBehaviour
 
     private void StartTraining()
     {
-        //removing old objects (appears when training aborted)
+        //remove remaining spawnables
         foreach (Transform spawnedObject in spawnedObjects)
         {
             Destroy(spawnedObject.gameObject);
         }
 
+        //prepare environment
         PlaceWallsBasedOnEnvSize();
         PlaceSpawnables();
 
         inTraining = true;
-        
+
         RestartDrone();
         trainingStartTime = Time.time;
     }
 
     private void RestartDrone()
     {
+        // reset rigidbody forces
         drone.GetComponent<Rigidbody>().velocity = Vector3.zero;
         drone.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
-        drone.transform.position = droneSpawnPoint.position;
-        drone.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
+        //reset position of drone & add random horizontal rotation
+        drone.transform.SetPositionAndRotation(droneSpawnPoint.position, Quaternion.Euler(0, Random.Range(0, 360), 0));
 
         drone.SetActive(true);
     }
@@ -107,11 +109,8 @@ public class EnvironmentManager : MonoBehaviour
     {
         switch (spawnables)
         {
-            case Spawnables.NONE:
-                //Debug.Log("Envorinment without spawnables");
-                break;
             case Spawnables.HITTABLEBLOCK:
-                for(int i=0; i< spawnableCount; i++)
+                for (int i = 0; i < spawnableCount; i++)
                 {
                     PlaceSpawnable(hittableBlock);
                 }
@@ -128,6 +127,9 @@ public class EnvironmentManager : MonoBehaviour
                     PlaceSpawnable(bigGate);
                 }
                 break;
+            case Spawnables.NONE:
+                //Debug.Log("Envorinment without spawnables");
+                break;
         }
     }
 
@@ -138,20 +140,19 @@ public class EnvironmentManager : MonoBehaviour
 
         float rangeToCheck = spawnableObject.minDistanceToOtherObjects;
 
-
-        for (int i=0; i < placementTries; i++)
+        for (int i = 0; i < placementTries; i++)
         {
-            Vector3 randomPostiton = new Vector3(
-                Random.Range( center.transform.position.x - 5 * environmentSize + rangeToCheck, center.transform.position.x + 5 * environmentSize - rangeToCheck),
+            Vector3 randomPostiton = new(
+                Random.Range(center.transform.position.x - 5 * environmentSize + rangeToCheck, center.transform.position.x + 5 * environmentSize - rangeToCheck),
                 Random.Range(center.transform.position.y - 5 * environmentSize + rangeToCheck, center.transform.position.y + 5 * environmentSize - rangeToCheck),
                 Random.Range(center.transform.position.z - 5 * environmentSize + rangeToCheck, center.transform.position.z + 5 * environmentSize - rangeToCheck));
 
-            //if no object in range
+            //check no object in range of randomPosition
             if (!Physics.CheckSphere(randomPostiton, rangeToCheck))
             {
                 GameObject spawnedObject = Instantiate(toSpawnObject, randomPostiton, Random.rotation);
                 spawnedObject.transform.parent = spawnedObjects.transform;
-                return;
+                return; // break placement loop
             }
         }
     }
@@ -166,9 +167,9 @@ public class EnvironmentManager : MonoBehaviour
             = right.localScale
             = new Vector3(environmentSize, 1, environmentSize);
 
-        //all center based because of multiple gyms in multiple positions
+        //place walls based on center point coordinates
         Vector3 newPostionTop = center.position;
-        newPostionTop.y = newPostionTop.y * 2 ;
+        newPostionTop.y = newPostionTop.y * 2;
         top.position = newPostionTop;
 
         Vector3 newPostionLeft = center.position;
@@ -199,7 +200,7 @@ public class EnvironmentManager : MonoBehaviour
     private void CheckTrainingLength()
     {
         float currentTime = Time.time;
-        
+
         if (currentTime - trainingStartTime > maxTrainingLength)
         {
             Debug.Log("Resetting training because of time");
