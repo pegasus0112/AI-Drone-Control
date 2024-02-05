@@ -1,0 +1,65 @@
+{
+    "SAC-Test-1-TH-LOW": {
+        "checkpoints": [
+            {
+                "steps": 10499974,
+                "file_path": "results\\delta-less-single-Block-complex-NN-10s-per-block\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-10499974.onnx",
+                "reward": -31.609999790787697,
+                "creation_time": 1706282749.8368382,
+                "auxillary_file_paths": [
+                    "results\\delta-less-single-Block-complex-NN-10s-per-block\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-10499974.pt"
+                ]
+            },
+            {
+                "steps": 10999981,
+                "file_path": "results\\delta-less-single-Block-complex-NN-10s-per-block\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-10999981.onnx",
+                "reward": -3.110003888607025,
+                "creation_time": 1706318425.7789671,
+                "auxillary_file_paths": [
+                    "results\\delta-less-single-Block-complex-NN-10s-per-block\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-10999981.pt"
+                ]
+            },
+            {
+                "steps": 11499969,
+                "file_path": "results\\delta-less-single-Block-complex-NN-10s-per-block\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-11499969.onnx",
+                "reward": -33.26400026679039,
+                "creation_time": 1706354304.0511868,
+                "auxillary_file_paths": [
+                    "results\\delta-less-single-Block-complex-NN-10s-per-block\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-11499969.pt"
+                ]
+            },
+            {
+                "steps": 11999978,
+                "file_path": "results\\delta-less-single-Block-complex-NN-10s-per-block\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-11999978.onnx",
+                "reward": null,
+                "creation_time": 1706390071.1665251,
+                "auxillary_file_paths": [
+                    "results\\delta-less-single-Block-complex-NN-10s-per-block\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-11999978.pt"
+                ]
+            },
+            {
+                "steps": 12000283,
+                "file_path": "results\\delta-less-single-Block-complex-NN-10s-per-block\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-12000283.onnx",
+                "reward": -35.48000064492226,
+                "creation_time": 1706390072.8822396,
+                "auxillary_file_paths": [
+                    "results\\delta-less-single-Block-complex-NN-10s-per-block\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-12000283.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 12000283,
+            "file_path": "results\\delta-less-single-Block-complex-NN-10s-per-block\\SAC-Test-1-TH-LOW.onnx",
+            "reward": -35.48000064492226,
+            "creation_time": 1706390072.8822396,
+            "auxillary_file_paths": [
+                "results\\delta-less-single-Block-complex-NN-10s-per-block\\SAC-Test-1-TH-LOW\\SAC-Test-1-TH-LOW-12000283.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "1.13.1+cu117"
+    }
+}
