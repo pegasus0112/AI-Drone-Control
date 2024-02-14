@@ -242,7 +242,7 @@ PrefabInstance:
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 818567f1e6a4eea4988cc032df1735de, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: ad6b82a555e4acc4bb29828b5dbe7436, type: 3}
     - target: {fileID: 6051348810421311729, guid: 2c40595936f746e44acc5f333ab79443, type: 3}
       propertyPath: m_BehaviorName
       value: SAC-Test-1-TH-LOW
