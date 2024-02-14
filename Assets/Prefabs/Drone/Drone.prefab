@@ -285,7 +285,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4612521639141744578}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
@@ -526,7 +526,8 @@ MonoBehaviour:
   rotorStateRF: 1
   rotorStateLB: 1
   rotorStateRB: 1
-  isGrounded: 0
+  isGrounded: 1
+  maxGroundTime: 4
 --- !u!114 &1326000320420491401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,8 +548,7 @@ MonoBehaviour:
   motorRF: {fileID: 8231752623396780594}
   motorLB: {fileID: 8472049469541116328}
   motorRB: {fileID: 1287192767931090913}
-  yawMultiplier: 5.5
-  newControl: 1
+  yawMultiplier: 10.5
 --- !u!114 &2949905505468083478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,11 +565,15 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
-  selfPlay: 1
+  selfPlay: 0
   droneHandler: {fileID: 5043874156345446804}
   droneControl: {fileID: 1326000320420491401}
   droneRig: {fileID: 7963775248013033728}
   environmentManager: {fileID: 0}
+  rewardForFlyingOverTime: 3
+  penalyForCrashing: -30
+  penaltyForGroundedOverTime: -10
+  penaltyForTooLongGrounded: -20
   manualControl: {fileID: 3104508842387288139}
 --- !u!114 &3104508842387288139
 MonoBehaviour:
@@ -668,7 +672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 13
+    VectorObservationSize: 18
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 4
@@ -680,7 +684,7 @@ MonoBehaviour:
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: Drone-01
+  m_BehaviorName: PPO
   TeamId: 0
   m_UseChildSensors: 1
   m_UseChildActuators: 1
@@ -700,8 +704,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 7931647132928011140}
   m_SensorName: CameraSensor
-  m_Width: 133
-  m_Height: 80
+  m_Width: 80
+  m_Height: 50
   m_Grayscale: 0
   m_ObservationType: 0
   m_RuntimeCameraEnable: 0
@@ -797,7 +801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8982913601769202708, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
       propertyPath: forceMultiplier
-      value: 5
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8982913601769202708, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
       propertyPath: toCheckGroundDistance
@@ -919,7 +923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8982913601769202708, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
       propertyPath: forceMultiplier
-      value: 5
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8982913601769202708, guid: e6d80246d9f8cda43b5dfb7441c9b784, type: 3}
       propertyPath: toCheckGroundDistance
@@ -1037,7 +1041,7 @@ PrefabInstance:
       objectReference: {fileID: 7963775248013033728}
     - target: {fileID: 8982913601769202708, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
       propertyPath: forceMultiplier
-      value: 5
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8982913601769202708, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
       propertyPath: toCheckGroundDistance
@@ -1155,7 +1159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8982913601769202708, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
       propertyPath: forceMultiplier
-      value: 5
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8982913601769202708, guid: 29ceba341ad87c841b5c71d728ec7978, type: 3}
       propertyPath: toCheckGroundDistance

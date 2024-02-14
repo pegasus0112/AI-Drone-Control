@@ -16,6 +16,7 @@ public class ManualControl : MonoBehaviour
     [Range(-1, 1)] public float pitch = 0;
     [Range(-1, 1)] public float roll = 0;
 
+    //enable & disable needed for new input system
     private void OnEnable()
     {
         throttleAxis.Enable();
@@ -32,21 +33,16 @@ public class ManualControl : MonoBehaviour
         rollAxis.Disable();
     }
 
-
     public void ReadUserInputJoysticks()
     {
         throttle = throttleAxis.ReadValue<float>();
         throttle = Remap(throttle, -1, 1, 0, 1);
-        //Debug.Log("throttle " + throttle);
 
+        //inverting pitch
         pitch = -pitchAxis.ReadValue<float>();
-        //Debug.Log("pitch " + pitch);
 
         roll = rollAxis.ReadValue<float>();
-        //Debug.Log("roll " + roll);
-
         yaw = yawAxis.ReadValue<float>();
-        //Debug.Log("yaw " + yaw);
     }
 
     private float Remap(float value, float from1, float to1, float from2, float to2)

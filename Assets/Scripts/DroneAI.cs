@@ -1,4 +1,3 @@
-using System;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
@@ -8,6 +7,7 @@ public class DroneAI : Agent
 {
     [Header("Status")]
     public bool selfPlay = true;
+    public int clearedObjectCount = 0;
 
 
     [Space(10)]
@@ -20,79 +20,82 @@ public class DroneAI : Agent
 
     [Space(10)]
     [Header("Reward / Pentalies")]
-    //reward splitted over 1min
-    public float rewardForFlying = 3;
+    public float rewardForFlyingOverTime = 3;
 
     [Space(5)]
-    //penalty every 1s
-    public float penaltyForGrounded = -1;
-    public float penalyForCrashing = -5;
+    public float penalyForCrashing = -30;
+    public float penaltyForGroundedOverTime = -10;
+    public float penaltyForTooLongGrounded = -20;
 
 
     [Space(10)]
     [Header("Manual Control Setup")]
     public ManualControl manualControl;
 
-
     public override void CollectObservations(VectorSensor sensor)
     {
+        sensor.AddObservation(droneHandler.isGrounded);
+
+        // drone collision states
         sensor.AddObservation(droneHandler.droneFrameState);
         sensor.AddObservation(droneHandler.rotorStateLF);
         sensor.AddObservation(droneHandler.rotorStateRF);
         sensor.AddObservation(droneHandler.rotorStateLB);
         sensor.AddObservation(droneHandler.rotorStateRB);
 
-        sensor.AddObservation(droneHandler.isGrounded);
-
-        //later add acceleration & rotation
+        //speed in all directions
         sensor.AddObservation(new Vector3(droneRig.velocity.x, droneRig.velocity.y, droneRig.velocity.z));
+
+        // drone rotation
         sensor.AddObservation(gameObject.transform.rotation);
+
+        // current controls
+        sensor.AddObservation(droneControl.throttle);
+        sensor.AddObservation(droneControl.yaw);
+        sensor.AddObservation(droneControl.pitch);
+        sensor.AddObservation(droneControl.roll);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
-        if (droneHandler.CheckPartsGotDestroyed())
+        AddRewardAndPenalties();
+
+        // drone crashed?
+        if (droneHandler.CheckPartsAreOkay())
         {
+            
             RequestDecision();
         }
         else
         {
-            environmentManager.EndTraining();
-            //GAME OVER
+            //GAME OVER & env reset
             AddReward(penalyForCrashing);
+            environmentManager.EndTraining();
         }
-
-        AddRewardAndPenalties();
     }
 
     private void AddRewardAndPenalties()
     {
-        if(droneHandler.isGrounded)
+        if (droneHandler.isGrounded)
         {
-            AddReward(penaltyForGrounded * Time.deltaTime);
-        } else
-        {
-            AddReward(rewardForFlying / 60 * Time.deltaTime);
+            AddReward(penaltyForGroundedOverTime * Time.deltaTime);
         }
-        //penalty for IsGrounded+
+        else
+        {
+            AddReward(rewardForFlyingOverTime * Time.deltaTime);
+        }
     }
-
-
-
     public override void Heuristic(in ActionBuffers actionsOut)
     {
+        
         if (selfPlay)
         {
             var continuousActionsOut = actionsOut.ContinuousActions;
 
             manualControl.ReadUserInputJoysticks();
+
+            //overwriting controls with manual control
             continuousActionsOut[0] = manualControl.throttle;
             continuousActionsOut[1] = manualControl.yaw;
             continuousActionsOut[2] = manualControl.pitch;
@@ -110,7 +113,15 @@ public class DroneAI : Agent
 
     public void Scored(float points)
     {
-        Debug.Log("Drone scored " + points);
+        Debug.Log("Drone scored");
+        clearedObjectCount++;
         AddReward(points);
+    }
+
+    public void EndEpisodeBecauseTooLongGrounded()
+    {
+        Debug.Log("Resetting training because of ground time");
+        AddReward(penaltyForTooLongGrounded);
+        environmentManager.EndTraining();
     }
 }

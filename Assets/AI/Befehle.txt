@@ -1,13 +1,9 @@
 Python Environment:
 
-C:\Benutzer\Alex\Dokumente\GitHub\training-env\Scripts\activate
+anaconda powershell öffnen
+conda activate mlagents
 
-
-
-
-
-
-
+cd bleisingeral\AI-Drone-Control\Assets\AI
 
 
 
@@ -25,3 +21,6 @@ mlagents-learn Mouse.yaml --run-id=jerry4
 mlagents-learn Joined2P5Steps.yaml --run-id=UniqueGyms01
 
 mlagents-learn JoinedLONG.yaml --run-id=15Mio
+
+
+mlagents-learn PPO-1.yaml --run-id=Alpha-PPO-P1-try-learn

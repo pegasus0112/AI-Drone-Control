@@ -1,7 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class DroneHandler : MonoBehaviour
@@ -17,7 +14,7 @@ public class DroneHandler : MonoBehaviour
     public DroneControl droneControl;
     public DroneAI droneAI;
 
-    //are drone parts okay?
+    //are parts okay
     public bool droneFrameState = true;
     public bool rotorStateLF = true;
     public bool rotorStateRF = true;
@@ -27,9 +24,17 @@ public class DroneHandler : MonoBehaviour
     [Header("Status")]
     public bool isGrounded;
 
-    //important for resetting state after restarting training
+    [Space(10)]
+    [Header("Settings")]
+    [Range(1, 10)] public float maxGroundTime = 4;
+    private float lastGroundTime;
+
+    private int lastHitObjectHash = -1;
+
+    //resetting drone states after restarting training
     private void OnEnable()
     {
+        lastGroundTime = -1;
         droneFrameState = true;
         rotorStateLF = true;
         rotorStateRF = true;
@@ -37,17 +42,11 @@ public class DroneHandler : MonoBehaviour
         rotorStateRB = true;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
+    //everything except controle and AI
     void FixedUpdate()
     {
-        //Everything except controle and AI
         CheckAnyMotorGrounded();
+        ResetDroneIfTooLongOnGround();
     }
 
     private void CheckAnyMotorGrounded()
@@ -58,16 +57,35 @@ public class DroneHandler : MonoBehaviour
              | droneControl.motorRB.isGrounded;
     }
 
-    public bool CheckPartsGotDestroyed()
+    public bool CheckPartsAreOkay()
     {
         return droneFrameState && rotorStateLF && rotorStateRF && rotorStateLB && rotorStateRB;
     }
+    private void ResetDroneIfTooLongOnGround()
+    {
+        if (isGrounded)
+        {
+            float currentTime = Time.time;
+            if (isGrounded && lastGroundTime == -1)
+            {
+                lastGroundTime = Time.time;
+            }
+            else if (isGrounded && currentTime - lastGroundTime > maxGroundTime)
+            {
+                droneAI.EndEpisodeBecauseTooLongGrounded();
+            }
+        }
+        else
+        {
+            lastGroundTime = -1;
+        }
+    }
 
-    //Walls & Ground
+    //called for walls, ground or gate frame
     private void OnCollisionEnter(Collision collision)
     {
         GameObject ownHittedObject = collision.GetContact(0).thisCollider.gameObject;
-        if (ownHittedObject.tag == "Rotor")
+        if (ownHittedObject.CompareTag("Rotor"))
         {
             ROTOR hittedMotor = ownHittedObject.transform.parent.parent.GetComponent<Motor>().motorPosition;
 
@@ -88,26 +106,25 @@ public class DroneHandler : MonoBehaviour
                     rotorStateRB = false;
                     break;
             }
-        } else if(ownHittedObject.tag == "Drone")
+        }
+        else if (ownHittedObject.CompareTag("Drone"))
         {
             droneFrameState = false;
         }
-
-        //Debug.Log(collision.GetContact(0).thisCollider.gameObject.tag + " - " + collision.GetContact(0).otherCollider.gameObject.tag);
     }
 
-    //Hittables / Gates
+    //called for hittable parts of spawnables 
     private void OnTriggerEnter(Collider other)
     {
         GameObject hittedSpawnable = other.gameObject;
 
-        if (hittedSpawnable.tag == "Gate" || hittedSpawnable.tag == "HittableBlock")
+        if (hittedSpawnable.CompareTag("Gate") || hittedSpawnable.CompareTag("HittableBlock"))
         {
             SpawnableObject spawnedObject;
 
-            //gate collider does not have the script & only hittable not complete gate would be destroyed later
-            if (hittedSpawnable.tag == "Gate")
+            if (hittedSpawnable.CompareTag("Gate"))
             {
+                //hittable part, not gate collider has script
                 hittedSpawnable = hittedSpawnable.transform.parent.gameObject;
             }
 
@@ -115,8 +132,18 @@ public class DroneHandler : MonoBehaviour
 
             if (spawnedObject.cleared)
             {
-                droneAI.Scored(spawnedObject.pointsForClearing);
-                Destroy(hittedSpawnable);
+                //check already collided with same cleared object
+                if (lastHitObjectHash != spawnedObject.GetHashCode())
+                {
+                    lastHitObjectHash = spawnedObject.GetHashCode();
+                    droneAI.Scored(spawnedObject.pointsForClearing);
+                    Destroy(hittedSpawnable);
+                }
+                else
+                {
+                    // multiple hits with same cleared object
+                    Debug.Log("object already cleared");
+                }
             }
         }
     }
